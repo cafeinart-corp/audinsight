@@ -1,0 +1,38 @@
+.topPointerIcon {
+  position: relative;
+  width: 16px;
+  height: 8px;
+}
+.label {
+  position: relative;
+  line-height: 20px;
+  font-weight: 500;
+}
+.container,
+.tooltip {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  border-radius: var(--br-5xs);
+  background-color: var(--color-seagreen);
+  flex-direction: row;
+  padding: var(--padding-5xs);
+}
+.tooltip {
+  flex-direction: column;
+}
+.layoutsimpleSubLayouttop {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: center;
+  font-size: var(--typography-label-small-size);
+  color: var(--color-white);
+  font-family: var(--typography-heading-small);
+}

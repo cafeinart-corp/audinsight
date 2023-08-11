@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Nuance:wght@500;700&display=swap");
+body {
+  margin: 0;
+  line-height: normal;
+}
+:root {
+  /* fonts */
+  --typography-heading-small: Nuance;
+
+  /* font sizes */
+  --typography-label-large-size: 18px;
+  --typography-heading-small-size: 24px;
+  --typography-label-x-small-size: 12px;
+  --typography-label-medium-size: 16px;
+  --typography-label-small-size: 14px;
+  --typography-heading-x-small-size: 20px;
+  --typography-heading-x-large-size: 36px;
+
+  /* Colors */
+  --color-white: #fff;
+  --color-black: #000;
+  --color-seagreen: #006c4b;
+  --color-dimgray: #5e5e5e;
+  --color-gainsboro: #e8e8e8;
+  --color-whitesmoke-100: #f3f3f3;
+  --color-whitesmoke-200: #ecf4f1;
+
+  /* Gaps */
+  --gap-9xs: 4px;
+  --gap-5xs: 8px;
+
+  /* Paddings */
+  --padding-5xs: 8px;
+
+  /* border radiuses */
+  --br-13xl: 32px;
+  --br-5xs: 8px;
+  --br-xs: 12px;
+}

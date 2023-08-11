@@ -1,0 +1,143 @@
+import Size8px from "./Size8px";
+import ClassLabelSizeXSmall from "./ClassLabelSizeXSmall";
+import styles from "./ArtworkSection.module.css";
+const ArtworkSection = () => {
+  return (
+    <div className={styles.rectangleParent}>
+      <img className={styles.frameChild} alt="" src="/rectangle-4@2x.png" />
+      <div className={styles.spacerParent}>
+        <Size8px
+          size8pxWidth="unset"
+          size8pxPosition="unset"
+          size8pxAlignSelf="stretch"
+          size8pxTop="unset"
+          size8pxLeft="unset"
+          spacerBackgroundColor="unset"
+          spacerHeight="24px"
+        />
+        <div className={styles.typographyParent}>
+          <ClassLabelSizeXSmall
+            classLabelSizeXSmallPosition="absolute"
+            classLabelSizeXSmallTop="0px"
+            classLabelSizeXSmallLeft="0px"
+            classLabelSizeXSmallWidth="unset"
+            classLabelSizeXSmallMaxWidth="unset"
+            textColor="#000"
+            textFontSize="16px"
+            textLineHeight="20px"
+            textFontWeight="500"
+            textTextAlign="left"
+            wereTheLargestMargin="unset"
+            wereTheLargestAlignSelf="stretch"
+            wereTheLargestOverflow="hidden"
+            wereTheLargestDisplay="flex"
+            wereTheLargestFlexDirection="column"
+            wereTheLargestAlignItems="flex-start"
+            wereTheLargestJustifyContent="flex-start"
+          />
+          <ClassLabelSizeXSmall
+            classLabelSizeXSmallPosition="absolute"
+            classLabelSizeXSmallTop="0px"
+            classLabelSizeXSmallLeft="80px"
+            classLabelSizeXSmallWidth="unset"
+            classLabelSizeXSmallMaxWidth="unset"
+            textColor="#5e5e5e"
+            textFontSize="16px"
+            textLineHeight="20px"
+            textFontWeight="500"
+            textTextAlign="left"
+            wereTheLargestMargin="unset"
+            wereTheLargestAlignSelf="stretch"
+            wereTheLargestOverflow="hidden"
+            wereTheLargestDisplay="flex"
+            wereTheLargestFlexDirection="column"
+            wereTheLargestAlignItems="flex-start"
+            wereTheLargestJustifyContent="flex-start"
+          />
+        </div>
+        <div className={styles.typographyGroup}>
+          <ClassLabelSizeXSmall
+            classLabelSizeXSmallPosition="absolute"
+            classLabelSizeXSmallTop="0px"
+            classLabelSizeXSmallLeft="0px"
+            classLabelSizeXSmallWidth="unset"
+            classLabelSizeXSmallMaxWidth="unset"
+            textColor="#000"
+            textFontSize="16px"
+            textLineHeight="20px"
+            textFontWeight="500"
+            textTextAlign="left"
+            wereTheLargestMargin="unset"
+            wereTheLargestAlignSelf="stretch"
+            wereTheLargestOverflow="hidden"
+            wereTheLargestDisplay="flex"
+            wereTheLargestFlexDirection="column"
+            wereTheLargestAlignItems="flex-start"
+            wereTheLargestJustifyContent="flex-start"
+          />
+          <ClassLabelSizeXSmall
+            classLabelSizeXSmallPosition="absolute"
+            classLabelSizeXSmallTop="0px"
+            classLabelSizeXSmallLeft="80px"
+            classLabelSizeXSmallWidth="unset"
+            classLabelSizeXSmallMaxWidth="unset"
+            textColor="#5e5e5e"
+            textFontSize="16px"
+            textLineHeight="20px"
+            textFontWeight="500"
+            textTextAlign="left"
+            wereTheLargestMargin="unset"
+            wereTheLargestAlignSelf="stretch"
+            wereTheLargestOverflow="hidden"
+            wereTheLargestDisplay="flex"
+            wereTheLargestFlexDirection="column"
+            wereTheLargestAlignItems="flex-start"
+            wereTheLargestJustifyContent="flex-start"
+          />
+        </div>
+        <div className={styles.typographyContainer}>
+          <ClassLabelSizeXSmall
+            classLabelSizeXSmallPosition="absolute"
+            classLabelSizeXSmallTop="0px"
+            classLabelSizeXSmallLeft="0px"
+            classLabelSizeXSmallWidth="unset"
+            classLabelSizeXSmallMaxWidth="unset"
+            textColor="#000"
+            textFontSize="16px"
+            textLineHeight="20px"
+            textFontWeight="500"
+            textTextAlign="left"
+            wereTheLargestMargin="unset"
+            wereTheLargestAlignSelf="stretch"
+            wereTheLargestOverflow="hidden"
+            wereTheLargestDisplay="flex"
+            wereTheLargestFlexDirection="column"
+            wereTheLargestAlignItems="flex-start"
+            wereTheLargestJustifyContent="flex-start"
+          />
+          <ClassLabelSizeXSmall
+            classLabelSizeXSmallPosition="absolute"
+            classLabelSizeXSmallTop="0px"
+            classLabelSizeXSmallLeft="80px"
+            classLabelSizeXSmallWidth="unset"
+            classLabelSizeXSmallMaxWidth="unset"
+            textColor="#5e5e5e"
+            textFontSize="16px"
+            textLineHeight="20px"
+            textFontWeight="500"
+            textTextAlign="left"
+            wereTheLargestMargin="unset"
+            wereTheLargestAlignSelf="stretch"
+            wereTheLargestOverflow="hidden"
+            wereTheLargestDisplay="flex"
+            wereTheLargestFlexDirection="column"
+            wereTheLargestAlignItems="flex-start"
+            wereTheLargestJustifyContent="flex-start"
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ArtworkSection;

@@ -1,0 +1,93 @@
+.text {
+  align-self: stretch;
+  position: relative;
+  line-height: 32px;
+}
+.spacer,
+.spacer1 {
+  align-self: stretch;
+  overflow: hidden;
+}
+.spacer1 {
+  position: relative;
+  height: 12px;
+  flex-shrink: 0;
+}
+.spacer {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.typography,
+.typography1,
+.typographyParent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.typography1 {
+  color: var(--color-black);
+}
+.typographyParent {
+  position: absolute;
+  top: 953px;
+  left: 16px;
+}
+.groupChild {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--color-white);
+  width: 430px;
+  height: 59px;
+}
+.div,
+.icons {
+  position: relative;
+}
+.icons {
+  width: 28px;
+  height: 28px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.div {
+  line-height: 24px;
+  font-weight: 500;
+}
+.iconsParent,
+.rectangleParent {
+  position: absolute;
+  left: 0;
+  width: 430px;
+}
+.iconsParent {
+  top: 59px;
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: row;
+  padding: 12px 16px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-between;
+}
+.rectangleParent {
+  top: 0;
+  height: 111px;
+  text-align: center;
+  font-size: var(--typography-label-large-size);
+  color: var(--color-black);
+}
+.iphone14ProMax1 {
+  position: relative;
+  background-color: var(--color-white);
+  width: 100%;
+  height: 1960px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--typography-heading-small-size);
+  color: var(--color-seagreen);
+  font-family: var(--typography-heading-small);
+}

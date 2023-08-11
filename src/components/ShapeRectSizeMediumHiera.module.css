@@ -1,0 +1,44 @@
+.iconsfavorite {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.label {
+  position: relative;
+  line-height: 20px;
+  font-weight: 500;
+}
+.content,
+.contentWrapper,
+.shaperectSizemediumHiera {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content {
+  overflow: hidden;
+  flex-direction: row;
+  padding: 0 var(--padding-5xs);
+  gap: var(--gap-5xs);
+}
+.contentWrapper,
+.shaperectSizemediumHiera {
+  flex-direction: column;
+}
+.contentWrapper {
+  align-self: stretch;
+  border-radius: var(--br-xs);
+  background-color: var(--color-whitesmoke-200);
+  height: 48px;
+}
+.shaperectSizemediumHiera {
+  position: relative;
+  border-radius: var(--br-5xs);
+  width: 256px;
+  text-align: center;
+  font-size: var(--typography-label-medium-size);
+  color: var(--color-seagreen);
+  font-family: var(--typography-heading-small);
+}
