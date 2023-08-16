@@ -1,5 +1,6 @@
 import { useMemo } from "react";
 import styles from "./ClassLabelSizeXSmall.module.css";
+
 const ClassLabelSizeXSmall = ({
   galleryDescription,
   spacer = true,
@@ -76,8 +77,6 @@ const ClassLabelSizeXSmall = ({
         <p className={styles.wereTheLargest} style={wereTheLargestStyle}>
           {galleryDescription}
         </p>
-        <p className={styles.wereTheLargest}>세상에서 가장 큰 아트 갤러리</p>
-        <p className={styles.wereTheLargest}>0123456789</p>
       </div>
       {spacer && (
         <div className={styles.spacer}>

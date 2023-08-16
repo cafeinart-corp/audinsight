@@ -7,17 +7,17 @@
 }
 .typographyParent {
   position: relative;
-  width: 121px;
+  width: 398px;
   height: 28px;
 }
 .typographyContainer,
 .typographyGroup {
   position: relative;
-  width: 168px;
+  width: 398px;
   height: 28px;
 }
 .typographyContainer {
-  width: 192px;
+  width: 398px;
 }
 .rectangleParent,
 .spacerParent {
