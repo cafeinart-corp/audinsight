@@ -16,7 +16,9 @@ const ArtworkSection = () => {
           spacerHeight="24px"
         />
         <div className={styles.typographyParent}>
+          {/* 제작년도 */}
           <ClassLabelSizeXSmall
+            galleryDescription="제작년도"
             classLabelSizeXSmallPosition="absolute"
             classLabelSizeXSmallTop="0px"
             classLabelSizeXSmallLeft="0px"
@@ -36,6 +38,7 @@ const ArtworkSection = () => {
             wereTheLargestJustifyContent="flex-start"
           />
           <ClassLabelSizeXSmall
+            galleryDescription="2019"
             classLabelSizeXSmallPosition="absolute"
             classLabelSizeXSmallTop="0px"
             classLabelSizeXSmallLeft="80px"
@@ -56,7 +59,9 @@ const ArtworkSection = () => {
           />
         </div>
         <div className={styles.typographyGroup}>
+          {/* 재료 */}
           <ClassLabelSizeXSmall
+            galleryDescription={"재료"}
             classLabelSizeXSmallPosition="absolute"
             classLabelSizeXSmallTop="0px"
             classLabelSizeXSmallLeft="0px"
@@ -76,6 +81,7 @@ const ArtworkSection = () => {
             wereTheLargestJustifyContent="flex-start"
           />
           <ClassLabelSizeXSmall
+            galleryDescription={"캔버스, 아크릴"}
             classLabelSizeXSmallPosition="absolute"
             classLabelSizeXSmallTop="0px"
             classLabelSizeXSmallLeft="80px"
@@ -96,7 +102,9 @@ const ArtworkSection = () => {
           />
         </div>
         <div className={styles.typographyContainer}>
+          {/* 크기 */}
           <ClassLabelSizeXSmall
+            galleryDescription={"크기"}
             classLabelSizeXSmallPosition="absolute"
             classLabelSizeXSmallTop="0px"
             classLabelSizeXSmallLeft="0px"
@@ -116,6 +124,7 @@ const ArtworkSection = () => {
             wereTheLargestJustifyContent="flex-start"
           />
           <ClassLabelSizeXSmall
+            galleryDescription={"100 x 100 cm"}
             classLabelSizeXSmallPosition="absolute"
             classLabelSizeXSmallTop="0px"
             classLabelSizeXSmallLeft="80px"

@@ -30,7 +30,7 @@ const ShapeRectSizeMediumHiera = ({
       <div className={styles.contentWrapper}>
         <div className={styles.content}>
           {iconLeading && (
-            <img className={styles.iconsfavorite} alt="" src={iconsFavorite} />
+            <img className={styles.iconsfavorite} alt="" src={iconsFavorite}  />
           )}
           <div className={styles.label}>{label}</div>
           {iconTrailing && (

@@ -8,6 +8,7 @@ const SectionCard = () => {
   return (
     <div className={styles.typographyParent}>
       <ClassLabelSizeXSmall
+        galleryDescription="Sarah Morris"
         classLabelSizeXSmallPosition="unset"
         classLabelSizeXSmallTop="unset"
         classLabelSizeXSmallLeft="unset"
@@ -27,6 +28,7 @@ const SectionCard = () => {
         wereTheLargestJustifyContent="flex-start"
       />
       <ClassLabelSizeXSmall
+        galleryDescription="Ah! East Asian Painting"
         classLabelSizeXSmallPosition="unset"
         classLabelSizeXSmallTop="unset"
         classLabelSizeXSmallLeft="unset"
@@ -59,9 +61,10 @@ const SectionCard = () => {
         <div className={styles.groupParent}>
           <div className={styles.typographyGroup}>
             <ClassLabelSizeXSmall
+              galleryDescription="작품에 대한 의견을 남겨주세요."
               classLabelSizeXSmallPosition="absolute"
               classLabelSizeXSmallTop="0px"
-              classLabelSizeXSmallLeft="calc(50% - 119px)"
+              classLabelSizeXSmallLeft="calc(50% - 140px)"
               classLabelSizeXSmallWidth="unset"
               classLabelSizeXSmallMaxWidth="unset"
               textColor="#006c4b"
