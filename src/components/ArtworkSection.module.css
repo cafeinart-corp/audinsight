@@ -32,7 +32,7 @@
   max-width: 398px;
 }
 .rectangleParent {
-  position: absolute;
+  /* position: absolute; */
   top: 1073px;
   left: 16px;
 }

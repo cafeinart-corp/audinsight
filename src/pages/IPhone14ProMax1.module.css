@@ -37,13 +37,13 @@
 }
 
 .typographyParent {
-  position: absolute;
-  top: 953px;
-  left: 16px;
+  /* position: absolute; */
+  width: 400px;
+  height: 59px;
 }
 
 .groupChild {
-  position: absolute;
+  /* position: absolute; */
   top: 0;
   left: 0;
   background-color: var(--color-white);
@@ -70,7 +70,7 @@
 
 .iconsParent,
 .rectangleParent {
-  position: absolute;
+  /* position: absolute; */
   left: 0;
   width: 430px;
 }
@@ -106,7 +106,7 @@
   font-family: var(--typography-heading-small);
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   min-height: 100vh;
   flex-direction: column;
 }

@@ -1,16 +1,21 @@
 import SectionCard from "../components/SectionCard";
 import ArtworkSection from "../components/ArtworkSection";
 import Size8px from "../components/Size8px";
-import ClassLabelSizeXSmall from "../components/ClassLabelSizeXSmall";
 import styles from "./IPhone14ProMax1.module.css";
 const IPhone14ProMax1 = () => {
   return (
     <div className={styles.iphone14ProMax1}>
+      <div className={styles.rectangleParent}>
+        <div className={styles.groupChild} />
+        <div className={styles.iconsParent}>
+          <img className={styles.icons} alt="" src="/icons.svg"/>
+          <div className={styles.div}>작품 상세정보</div>
+          <img className={styles.icons} alt="" src="/icons1.svg" />
+        </div>
+      </div>
       <SectionCard />
-      <ArtworkSection />
       <Size8px
         size8pxWidth="398px"
-        size8pxPosition="absolute"
         size8pxAlignSelf="unset"
         size8pxTop="913px"
         size8pxLeft="16px"
@@ -31,14 +36,16 @@ const IPhone14ProMax1 = () => {
           </div>
         </div>
       </div>
-      <div className={styles.rectangleParent}>
-        <div className={styles.groupChild} />
-        <div className={styles.iconsParent}>
-          <img className={styles.icons} alt="" src="/icons.svg"/>
-          <div className={styles.div}>작품 상세정보</div>
-          <img className={styles.icons} alt="" src="/icons1.svg" />
-        </div>
-      </div>
+      <Size8px
+        size8pxWidth="398px"
+        size8pxAlignSelf="unset"
+        size8pxTop="913px"
+        size8pxLeft="16px"
+        spacerBackgroundColor="unset"
+        spacerHeight="40px"
+      />
+      <ArtworkSection />
+      
     </div>
   );
 };
