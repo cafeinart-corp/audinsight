@@ -10,12 +10,12 @@ module.exports = {
         gray: "rgba(20, 24, 31, 0.2)",
         seagreen: "#006c4b",
         gainsboro: {
-          "100": "#e8e8e8",
-          "200": "#d9d9d9",
+          100: "#e8e8e8",
+          200: "#d9d9d9",
         },
         whitesmoke: {
-          "100": "#f3f3f3",
-          "200": "#ecf4f1",
+          100: "#f3f3f3",
+          200: "#ecf4f1",
         },
       },
       fontFamily: {

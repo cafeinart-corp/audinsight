@@ -14,8 +14,8 @@ const Home = () => {
   }, []);
 
   return (
-    <>
-      <a className="[text-decoration:none] relative bg-white w-full overflow-hidden flex flex-col items-center justify-center gap-[32px] min-w-[320px] max-w-[599px] text-center text-lg text-dimgray font-typography-heading-small">
+    <div className="flex justify-center items-center bg-gray-100">
+      <a className="[text-decoration:none] bg-white w-full overflow-hidden flex flex-col items-center justify-center gap-[32px] min-w-[320px] max-w-[660px] text-center text-lg text-dimgray font-typography-heading-small">
         <div className="self-stretch bg-seagreen flex flex-row py-2.5 px-4 items-center justify-between">
           <img
             className="relative w-6 h-6 overflow-hidden shrink-0"
@@ -50,13 +50,15 @@ const Home = () => {
               <div className="self-stretch relative h-6 overflow-hidden shrink-0" />
             </div>
           </div>
-          <div className="self-stretch overflow-hidden flex flex-col items-start justify-start bg-[url(/public/fixedaspectratio-cover-template@3x.png)] bg-cover bg-no-repeat bg-[top]">
-            <div className="self-stretch overflow-hidden flex flex-col items-start justify-start bg-[url(/public/fixedaspectratiospacer@3x.png)] bg-cover bg-no-repeat bg-[top] opacity-[0] z-[0]">
-              <div className="self-stretch h-80 flex flex-row items-start justify-start [transform:_rotate(-45deg)] [transform-origin:0_0]">
-                <div className="self-stretch [transform:_rotate(24.47deg)] [transform-origin:0_0]" />
+          {/* 첫번째 그림 */}
+          <div className="self-stretch relative overflow-hidden bg-[url(/public/fixedaspectratio-cover-template@3x.png)] bg-cover bg-no-repeat bg-[top] h-[664px]">
+            <div className="self-stretch absolute inset-0 overflow-hidden bg-[url(/public/fixedaspectratiospacer@3x.png)] bg-cover bg-no-repeat bg-[top] opacity-0 z-0">
+              <div className="self-stretch absolute inset-0 h-80 transform -rotate-45 origin-0">
+                <div className="self-stretch transform rotate-24.47 origin-0" />
               </div>
             </div>
           </div>
+
           <div className="self-stretch overflow-hidden flex flex-col items-start justify-start">
             <div className="self-stretch relative h-6 overflow-hidden shrink-0" />
           </div>
@@ -162,25 +164,10 @@ const Home = () => {
             </div>
           </div>
           <div className="self-stretch flex flex-col items-start justify-start text-center text-xs text-white font-ibm-plex-sans">
-            <div className="self-stretch rounded-3xl overflow-hidden flex flex-col items-start justify-start relative bg-[url(/public/fixedaspectratio-cover-template1@3x.png)] bg-cover bg-no-repeat bg-[top]">
-              <div className="my-0 mx-[!important] absolute w-full top-[0px] right-[0px] left-[0px] bg-gray [backdrop-filter:blur(8px)] box-border overflow-hidden hidden flex-col p-2 items-center justify-center z-[3] border-[1px] border-dashed border-white">
-                <div className="self-stretch relative leading-[16px]">
-                  Swap me with your AL Component
-                </div>
-              </div>
-              <div className="my-0 mx-[!important] absolute w-full top-[calc(50%_-_16px)] right-[0px] left-[0px] bg-gray [backdrop-filter:blur(8px)] box-border overflow-hidden hidden flex-col p-2 items-center justify-center z-[2] border-[1px] border-dashed border-white">
-                <div className="self-stretch relative leading-[16px]">
-                  Swap me with your AL Component
-                </div>
-              </div>
-              <div className="my-0 mx-[!important] absolute w-full right-[0px] bottom-[0px] left-[0px] bg-gray [backdrop-filter:blur(8px)] box-border overflow-hidden hidden flex-col p-2 items-center justify-center z-[1] border-[1px] border-dashed border-white">
-                <div className="self-stretch relative leading-[16px]">
-                  Swap me with your AL Component
-                </div>
-              </div>
-              <div className="self-stretch overflow-hidden flex flex-col items-start justify-start bg-[url(/public/fixedaspectratiospacer1@3x.png)] bg-cover bg-no-repeat bg-[top] opacity-[0] z-[0]">
-                <div className="self-stretch h-72 flex flex-row items-start justify-start [transform:_rotate(-45deg)] [transform-origin:0_0]">
-                  <div className="self-stretch [transform:_rotate(24.47deg)] [transform-origin:0_0]" />
+            <div className="self-stretch rounded-3xl relative overflow-hidden bg-[url(/public/fixedaspectratio-cover-template1@3x.png)] bg-cover bg-no-repeat bg-[top] h-[664px]">
+              <div className="self-stretch absolute inset-0 overflow-hidden bg-[url(/public/fixedaspectratiospacer1@3x.png)] bg-cover bg-no-repeat bg-[top] opacity-0 z-0">
+                <div className="self-stretch absolute inset-0 h-72 transform -rotate-45 origin-0">
+                  <div className="self-stretch transform rotate-24.47 origin-0" />
                 </div>
               </div>
             </div>
@@ -290,7 +277,7 @@ const Home = () => {
           <FrameComponent onClose={closeFrame} />
         </PortalPopup>
       )}
-    </>
+    </div>
   );
 };
 

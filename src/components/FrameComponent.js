@@ -1,8 +1,9 @@
 import { useCallback } from "react";
 
 const FrameComponent = ({ onClose }) => {
-  const onFrameContainer10Click = useCallback(() => {
-    // Please sync "iPhone 14 Pro Max - 3" to the project
+  const onPersonalInfoDetail = useCallback(() => {
+    // 개인정보 취급 방침
+    console.log("개인정보 취급 방침");
   }, []);
 
   return (
@@ -120,7 +121,7 @@ const FrameComponent = ({ onClose }) => {
               <div className="self-stretch flex flex-col items-start justify-start gap-[4px] text-sm text-dimgray font-typography-paragraph-small">
                 <div
                   className="self-stretch flex flex-row py-1 px-0 items-center justify-start gap-[4px] cursor-pointer"
-                  onClick={onFrameContainer10Click}
+                  onClick={onPersonalInfoDetail}
                 >
                   <div className="flex flex-row py-0.5 px-2 items-start justify-start">
                     <img
