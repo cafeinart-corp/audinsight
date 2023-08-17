@@ -1,9 +1,11 @@
-import { useState, useCallback } from "react";
+import React, { useState, useCallback, useEffect } from "react";
+import axios from "axios";
 import FrameComponent from "../components/FrameComponent";
 import PortalPopup from "../components/PortalPopup";
 
 const Home = () => {
   const [isFrameOpen, setFrameOpen] = useState(false);
+  const [apiData, setApiData] = useState({}); // API 데이터를 저장할 상태
 
   const openFrame = useCallback(() => {
     setFrameOpen(true);
@@ -11,6 +13,19 @@ const Home = () => {
 
   const closeFrame = useCallback(() => {
     setFrameOpen(false);
+  }, []);
+
+  // useEffect를 사용하여 컴포넌트가 마운트될 때 API 호출
+  useEffect(() => {
+    // API 호출
+    axios
+      .get("https://www.naver.com")
+      .then((response) => {
+        setApiData(response.data); // API 데이터를 상태에 저장
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
   }, []);
 
   return (
