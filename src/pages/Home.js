@@ -2,7 +2,7 @@ import { useState, useCallback } from "react";
 import FrameComponent from "../components/FrameComponent";
 import PortalPopup from "../components/PortalPopup";
 
-const Mobile320599 = () => {
+const Home = () => {
   const [isFrameOpen, setFrameOpen] = useState(false);
 
   const openFrame = useCallback(() => {
@@ -15,7 +15,7 @@ const Mobile320599 = () => {
 
   return (
     <>
-      <a className="[text-decoration:none] relative bg-white w-full overflow-hidden flex flex-col items-start justify-start gap-[32px] min-w-[320px] max-w-[599px] text-center text-lg text-dimgray font-typography-heading-small">
+      <a className="[text-decoration:none] relative bg-white w-full overflow-hidden flex flex-col items-center justify-center gap-[32px] min-w-[320px] max-w-[599px] text-center text-lg text-dimgray font-typography-heading-small">
         <div className="self-stretch bg-seagreen flex flex-row py-2.5 px-4 items-center justify-between">
           <img
             className="relative w-6 h-6 overflow-hidden shrink-0"
@@ -294,4 +294,4 @@ const Mobile320599 = () => {
   );
 };
 
-export default Mobile320599;
+export default Home;

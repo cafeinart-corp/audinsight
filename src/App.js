@@ -4,7 +4,7 @@ import {
   useNavigationType,
   useLocation,
 } from "react-router-dom";
-import Mobile320599 from "./pages/Mobile320599";
+import Home from "./pages/Home";
 import { useEffect } from "react";
 
 function App() {
@@ -45,7 +45,7 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<Mobile320599 />} />
+      <Route path="/" element={<Home />} />
     </Routes>
   );
 }
