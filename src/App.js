@@ -4,7 +4,7 @@ import {
   useNavigationType,
   useLocation,
 } from "react-router-dom";
-import IPhone14ProMax1 from "./pages/IPhone14ProMax1";
+import Mobile320599 from "./pages/Mobile320599";
 import { useEffect } from "react";
 
 function App() {
@@ -45,7 +45,7 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<IPhone14ProMax1 />} />
+      <Route path="/" element={<Mobile320599 />} />
     </Routes>
   );
 }
