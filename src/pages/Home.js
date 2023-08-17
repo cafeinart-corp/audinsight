@@ -19,9 +19,9 @@ const Home = () => {
   useEffect(() => {
     // API 호출
     axios
-      .get("https://www.naver.com")
+      .get("http://cafeinart.du.r.appspot.com/v1/artwork/1?format=api")
       .then((response) => {
-        setApiData(response.data); // API 데이터를 상태에 저장
+        console.log(response.data);
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
