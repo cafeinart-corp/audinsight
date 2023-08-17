@@ -5,7 +5,7 @@ import PortalPopup from "../components/PortalPopup";
 
 const Home = () => {
   const [isFrameOpen, setFrameOpen] = useState(false);
-  const [apiData, setApiData] = useState({}); // API 데이터를 저장할 상태
+  const [apiData, setData] = useState({}); // API 데이터를 저장할 상태
 
   const openFrame = useCallback(() => {
     setFrameOpen(true);
@@ -17,16 +17,25 @@ const Home = () => {
 
   // useEffect를 사용하여 컴포넌트가 마운트될 때 API 호출
   useEffect(() => {
-    // API 호출
-    axios
-      .get("http://cafeinart.du.r.appspot.com/v1/artwork/1?format=api")
-      .then((response) => {
-        console.log(response.data);
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-      });
+    fetchData().then((data) => {
+      if (data) {
+        setData(data[0]);
+        console.log(data[0]);
+      }
+    });
   }, []);
+
+  const fetchData = async () => {
+    try {
+      const response = await axios.get(
+        "https://cafeinart.du.r.appspot.com/v1/artist/2/?format=json"
+      );
+      return response.data; // API에서 받은 데이터 반환
+    } catch (error) {
+      console.error("Error fetching data:", error);
+      return null; // 에러 발생 시 null 반환
+    }
+  };
 
   return (
     <div className="flex justify-center items-center bg-gray-100">
@@ -50,9 +59,11 @@ const Home = () => {
         </div>
         <div className="self-stretch flex flex-col items-center justify-start">
           <div className="self-stretch flex flex-col py-0 px-4 items-start justify-start">
-            <div className="self-stretch relative leading-[24px] font-medium">
-              Sarah Morris
-            </div>
+            {apiData.title && (
+              <div className="self-stretch relative leading-[24px] font-medium">
+                {apiData.title}
+              </div>
+            )}
             <div className="self-stretch overflow-hidden flex flex-col items-start justify-start">
               <div className="self-stretch relative h-3 overflow-hidden shrink-0" />
             </div>
