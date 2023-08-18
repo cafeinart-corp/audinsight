@@ -100,8 +100,8 @@ const Home = ({ onClose }) => {
             </div>
           </div>
           {/* 첫번째 그림 */}
-          <div className="self-stretch relative overflow-hidden bg-[url(https://drive.google.com/file/d/113RCu6AHYoLT_i1ATCuY5x07V-OlaVqE/view?pli=1)] bg-cover bg-no-repeat bg-[top] h-[664px]">
-            <div className="self-stretch absolute inset-0 overflow-hidden bg-[https://drive.google.com/file/d/113RCu6AHYoLT_i1ATCuY5x07V-OlaVqE/view?pli=1)] bg-cover bg-no-repeat bg-[top] opacity-0 z-0">
+          <div className="self-stretch relative overflow-hidden bg-[url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fm.hanbit.co.kr%2Fchannel%2Fcategory%2Fcategory_view.html%3Fcms_code%3DCMS2886171024&psig=AOvVaw0ONKrbMcLFcLrhTKuOjgAi&ust=1692455552162000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCMj_pLO25oADFQAAAAAdAAAAABAD)] bg-cover bg-no-repeat bg-[top] h-[664px]">
+            <div className="self-stretch absolute inset-0 overflow-hidden bg-[https://www.google.com/url?sa=i&url=https%3A%2F%2Fm.hanbit.co.kr%2Fchannel%2Fcategory%2Fcategory_view.html%3Fcms_code%3DCMS2886171024&psig=AOvVaw0ONKrbMcLFcLrhTKuOjgAi&ust=1692455552162000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCMj_pLO25oADFQAAAAAdAAAAABAD)] bg-cover bg-no-repeat bg-[top] opacity-0 z-0">
               <div className="self-stretch absolute inset-0 h-80 transform -rotate-45 origin-0">
                 <div className="self-stretch transform rotate-24.47 origin-0" />
               </div>
