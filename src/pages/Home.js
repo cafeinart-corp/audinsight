@@ -5,7 +5,7 @@ import PortalPopup from "../components/PortalPopup";
 
 const Home = () => {
   const [isFrameOpen, setFrameOpen] = useState(false);
-  const [apiData, setData] = useState({}); // API 데이터를 저장할 상태
+  const [loadArtistData, setArtistData] = useState({}); // API 데이터를 저장할 상태
 
   const openFrame = useCallback(() => {
     setFrameOpen(true);
@@ -17,18 +17,18 @@ const Home = () => {
 
   // useEffect를 사용하여 컴포넌트가 마운트될 때 API 호출
   useEffect(() => {
-    fetchData().then((data) => {
+    fetchArtistData().then((data) => {
       if (data) {
-        setData(data[0]);
-        console.log(data[0]);
+        setArtistData(data);
+        console.log(data);
       }
     });
   }, []);
 
-  const fetchData = async () => {
+  const fetchArtistData = async () => {
     try {
       const response = await axios.get(
-        "https://cafeinart.du.r.appspot.com/v1/artist/2/?format=json"
+        "https://cafeinart.du.r.appspot.com/v1/artwork/1?format=json"
       );
       return response.data; // API에서 받은 데이터 반환
     } catch (error) {
@@ -59,9 +59,14 @@ const Home = () => {
         </div>
         <div className="self-stretch flex flex-col items-center justify-start">
           <div className="self-stretch flex flex-col py-0 px-4 items-start justify-start">
-            {apiData.title && (
+            {/* 작가이름 */}
+            {loadArtistData.artist ? (
               <div className="self-stretch relative leading-[24px] font-medium">
-                {apiData.title}
+                {loadArtistData.artist}
+              </div>
+            ) : (
+              <div className="self-stretch relative leading-[24px] font-medium">
+                Sarah Morris
               </div>
             )}
             <div className="self-stretch overflow-hidden flex flex-col items-start justify-start">
@@ -69,9 +74,16 @@ const Home = () => {
             </div>
           </div>
           <div className="self-stretch flex flex-col py-0 px-4 items-start justify-start text-17xl text-black">
-            <b className="self-stretch relative leading-[44px]">
-              Ah! East Asian Painting
-            </b>
+            {/* 작품제목 */}
+            {loadArtistData.title ? (
+              <b className="self-stretch relative leading-[44px]">
+                {loadArtistData.title}
+              </b>
+            ) : (
+              <b className="self-stretch relative leading-[44px]">
+                Ah! East Asian Painting
+              </b>
+            )}
             <div className="self-stretch overflow-hidden flex flex-col items-start justify-start">
               <div className="self-stretch relative h-6 overflow-hidden shrink-0" />
             </div>
@@ -175,9 +187,16 @@ const Home = () => {
               </div>
             </div>
             <div className="self-stretch flex flex-col items-start justify-start text-seagreen">
-              <b className="self-stretch relative leading-[32px]">
-                Ah! East Asian Painting
-              </b>
+              {/* 작품정보 */}
+              {loadArtistData.title ? (
+                <div className="self-stretch relative leading-[32px]">
+                  {loadArtistData.title}
+                </div>
+              ) : (
+                <div className="self-stretch relative leading-[32px]">
+                  Ah! East Asian Painting
+                </div>
+              )}
               <div className="self-stretch overflow-hidden hidden flex-col items-start justify-start">
                 <div className="self-stretch relative h-3 overflow-hidden shrink-0" />
               </div>
