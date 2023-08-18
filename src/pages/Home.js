@@ -3,9 +3,10 @@ import axios from "axios";
 import FrameComponent from "../components/FrameComponent";
 import PortalPopup from "../components/PortalPopup";
 
-const Home = () => {
+const Home = ({ onClose }) => {
   const [isFrameOpen, setFrameOpen] = useState(false);
   const [loadArtistData, setArtistData] = useState({}); // API 데이터를 저장할 상태
+  const [score, setHiddenLabel] = useState("0");
 
   const openFrame = useCallback(() => {
     setFrameOpen(true);
@@ -14,6 +15,16 @@ const Home = () => {
   const closeFrame = useCallback(() => {
     setFrameOpen(false);
   }, []);
+
+  const handleLikeClick = () => {
+    setHiddenLabel("1");
+    openFrame(); // 모달 열기
+  };
+
+  const handleCommonClick = () => {
+    setHiddenLabel("0");
+    openFrame();
+  };
 
   // useEffect를 사용하여 컴포넌트가 마운트될 때 API 호출
   useEffect(() => {
@@ -112,8 +123,9 @@ const Home = () => {
               </div>
               <div className="self-stretch flex flex-row items-start justify-start gap-[8px] text-base">
                 <div
+                  // 좋아요 버튼 클릭 시
                   className="flex-1 flex flex-col items-center justify-center cursor-pointer"
-                  onClick={openFrame}
+                  onClick={handleLikeClick}
                 >
                   <div className="self-stretch rounded-xl bg-whitesmoke-200 h-12 flex flex-col items-center justify-center">
                     <div className="overflow-hidden flex flex-row py-0 px-2 items-center justify-center gap-[8px]">
@@ -133,7 +145,12 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-                <div className="flex-1 flex flex-col items-center justify-center">
+
+                <div
+                  // 평범해요 버튼 클릭 시
+                  className="flex-1 flex flex-col items-center justify-center cursor-pointer"
+                  onClick={handleCommonClick}
+                >
                   <div className="self-stretch rounded-xl bg-whitesmoke-200 h-12 flex flex-col items-center justify-center">
                     <div className="overflow-hidden flex flex-row py-0 px-2 items-center justify-center gap-[8px]">
                       <img
@@ -319,7 +336,7 @@ const Home = () => {
           placement="Centered"
           onOutsideClick={closeFrame}
         >
-          <FrameComponent onClose={closeFrame} />
+          <FrameComponent score={score} onClose={closeFrame} />
         </PortalPopup>
       )}
     </div>
