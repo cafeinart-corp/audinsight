@@ -1,7 +1,44 @@
-@import url("https://fonts.googleapis.com/css2?family=Nuance:wght@500;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Pretendard:wght@400&display=swap");
-@tailwind base;
+@font-face {
+  font-family: "Nuance";
+  font-weight: 800;
+  src: url("./fonts/Nuance-ExtraBold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Nuance";
+  font-weight: 700;
+  src: url("./fonts/Nuance-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Nuance";
+  font-weight: 600;
+  src: url("./fonts/Nuance-SemiBold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Nuance";
+  font-weight: 500;
+  src: url("./fonts/Nuance-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Nuance";
+  font-weight: 400;
+  src: url("./fonts/Nuance-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Nuance";
+  font-weight: 300;
+  src: url("./fonts/Nuance-Light.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Nuance";
+  font-weight: 200;
+  src: url("./fonts/Nuance-ExtraLight.woff2") format("woff2");
+}
+
 @tailwind components;
 @tailwind utilities;
 body {
