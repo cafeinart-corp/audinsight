@@ -100,8 +100,8 @@ const Home = ({ onClose }) => {
             </div>
           </div>
           {/* 첫번째 그림 */}
-          <div className="self-stretch relative overflow-hidden bg-[url(https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FlNYp6%2FbtsrCyvTtbY%2FAWQwgkpPMg9x8fwqKHk7hk%2Fimg.jpg)] bg-cover bg-no-repeat bg-[top] h-[664px]">
-            <div className="self-stretch absolute inset-0 overflow-hidden bg-[https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FlNYp6%2FbtsrCyvTtbY%2FAWQwgkpPMg9x8fwqKHk7hk%2Fimg.jpg)] bg-cover bg-no-repeat bg-[top] opacity-0 z-0">
+          <div className="self-stretch relative overflow-hidden bg-[url(https://cdn-001.begg.xyz/y-0037340E.jpg)] bg-cover bg-no-repeat bg-[top] h-[664px]">
+            <div className="self-stretch absolute inset-0 overflow-hidden bg-[url(https://cdn-001.begg.xyz/y-0037340E.jpg)] bg-cover bg-no-repeat bg-[top] opacity-0 z-0">
               <div className="self-stretch absolute inset-0 h-80 transform -rotate-45 origin-0">
                 <div className="self-stretch transform rotate-24.47 origin-0" />
               </div>
