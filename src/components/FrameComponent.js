@@ -160,7 +160,7 @@ const FrameComponent = ({ score, onClose }) => {
               </div>
             </div>
           </div>
-          <div className="self-stretch flex flex-col py-0 px-4 items-start justify-start gap-[8px]">
+          {/* <div className="self-stretch flex flex-col py-0 px-4 items-start justify-start gap-[8px]">
             <div className="flex flex-col items-start justify-start text-black font-typography-heading-small">
               <div className="self-stretch relative leading-[24px] font-medium">
                 태어난 년도
@@ -169,7 +169,7 @@ const FrameComponent = ({ score, onClose }) => {
                 <div className="self-stretch relative h-3 overflow-hidden shrink-0" />
               </div>
             </div>
-            {/* <div className="self-stretch rounded-2xl bg-gainsboro-100 h-14 flex flex-col items-start justify-start relative min-w-[140px]">
+            <div className="self-stretch rounded-2xl bg-gainsboro-100 h-14 flex flex-col items-start justify-start relative min-w-[140px]">
               <div className="my-0 mx-[!important] absolute top-[14px] left-[16px] flex flex-col items-start justify-start z-[0]">
                 <div className="self-stretch relative leading-[28px]">
                   <input
@@ -187,14 +187,14 @@ const FrameComponent = ({ score, onClose }) => {
                   <div className="self-stretch relative h-10 overflow-hidden shrink-0" />
                 </div>
               </div>
-            </div> */}
+            </div>
             <div className="hidden flex-col items-start justify-start text-sm">
               <div className="self-stretch relative leading-[20px]">Hint</div>
               <div className="self-stretch overflow-hidden hidden flex-col items-start justify-start">
                 <div className="self-stretch relative h-7 overflow-hidden shrink-0" />
               </div>
             </div>
-          </div>
+          </div> */}
           <div className="self-stretch bg-white flex flex-col pt-0 px-0 pb-8 items-center justify-start gap-[16px] text-base text-seagreen font-typography-heading-small">
             <div className="self-stretch flex flex-col items-start justify-start gap-[16px]">
               <div className="self-stretch flex flex-col py-0 pr-4 pl-2 items-start justify-start gap-[4px]">
