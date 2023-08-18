@@ -71,9 +71,9 @@ const Home = ({ onClose }) => {
         <div className="self-stretch flex flex-col items-center justify-start">
           <div className="self-stretch flex flex-col py-0 px-4 items-start justify-start">
             {/* 작가이름 */}
-            {loadArtistData.artist ? (
+            {loadArtistData.artist_name ? (
               <div className="self-stretch relative leading-[24px] font-medium">
-                {loadArtistData.artist}
+                {loadArtistData.artist_name}
               </div>
             ) : (
               <div className="self-stretch relative leading-[24px] font-medium">
@@ -100,14 +100,21 @@ const Home = ({ onClose }) => {
             </div>
           </div>
           {/* 첫번째 그림 */}
-          <div className="self-stretch relative overflow-hidden bg-[url(/public/fixedaspectratio-cover-template@3x.png)] bg-cover bg-no-repeat bg-[top] h-[664px]">
-            <div className="self-stretch absolute inset-0 overflow-hidden bg-[url(/public/fixedaspectratiospacer@3x.png)] bg-cover bg-no-repeat bg-[top] opacity-0 z-0">
+          <div className="self-stretch relative overflow-hidden bg-[url(https://drive.google.com/file/d/113RCu6AHYoLT_i1ATCuY5x07V-OlaVqE/view?pli=1)] bg-cover bg-no-repeat bg-[top] h-[664px]">
+            <div className="self-stretch absolute inset-0 overflow-hidden bg-[https://drive.google.com/file/d/113RCu6AHYoLT_i1ATCuY5x07V-OlaVqE/view?pli=1)] bg-cover bg-no-repeat bg-[top] opacity-0 z-0">
               <div className="self-stretch absolute inset-0 h-80 transform -rotate-45 origin-0">
                 <div className="self-stretch transform rotate-24.47 origin-0" />
               </div>
             </div>
           </div>
 
+          {/* <div className="self-stretch relative overflow-hidden bg-[url(/public/fixedaspectratio-cover-template@3x.png)] bg-cover bg-no-repeat bg-[top] h-[664px]">
+            <div className="self-stretch absolute inset-0 overflow-hidden bg-[url(/public/fixedaspectratiospacer@3x.png)] bg-cover bg-no-repeat bg-[top] opacity-0 z-0">
+              <div className="self-stretch absolute inset-0 h-80 transform -rotate-45 origin-0">
+                <div className="self-stretch transform rotate-24.47 origin-0" />
+              </div>
+            </div>
+          </div> */}
           <div className="self-stretch overflow-hidden flex flex-col items-start justify-start">
             <div className="self-stretch relative h-6 overflow-hidden shrink-0" />
           </div>
@@ -295,19 +302,24 @@ const Home = ({ onClose }) => {
           </div>
           <div className="self-stretch flex flex-col items-start justify-start text-base text-black font-typography-paragraph-small">
             <div className="self-stretch relative leading-[24px]">
-              <p className="m-0">
-                갤러리현대는 성능경(1944년생)의 개인전 《성능경의 망친 예술
-                행각》을 8월 23일부터 10월 8일까지 개최한다. 2010년대 초반부터
-                한국 실험미술을 재조명해 온 갤러리현대와 ‘한국적 개념미술’을
-                개척한 선구자로 평가받는 성능경 작가가 함께하는 첫 전시다. 전시
-                타이틀인 ‘망친 예술’과 ‘행각’은 삶과 예술의 경계에서 생각의
-                틈새를 제시하고자 하는 성능경의 예술관을 응축한 키워드다. 작가는
-                평생 비주류적 태도를 고수하며 자신의 작품을 ‘망친 예술’로
-                명명함으로써 전통적인 예술 심미관을 재성찰하고, 틀에 박힌 예술의
-                문법과 인간 삶의 조건을 향해 질문하는 ‘행각(퍼포먼스)’의 변주를
-                오늘날까지 실천하고 있다.
-              </p>
-              <p className="m-0">&nbsp;</p>
+              {loadArtistData.description ? (
+                <p className="m-0">{loadArtistData.description}</p>
+              ) : (
+                <p className="m-0">
+                  갤러리현대는 성능경(1944년생)의 개인전 《성능경의 망친 예술
+                  행각》을 8월 23일부터 10월 8일까지 개최한다. 2010년대 초반부터
+                  한국 실험미술을 재조명해 온 갤러리현대와 ‘한국적 개념미술’을
+                  개척한 선구자로 평가받는 성능경 작가가 함께하는 첫 전시다.
+                  전시 타이틀인 ‘망친 예술’과 ‘행각’은 삶과 예술의 경계에서
+                  생각의 틈새를 제시하고자 하는 성능경의 예술관을 응축한
+                  키워드다. 작가는 평생 비주류적 태도를 고수하며 자신의 작품을
+                  ‘망친 예술’로 명명함으로써 전통적인 예술 심미관을 재성찰하고,
+                  틀에 박힌 예술의 문법과 인간 삶의 조건을 향해 질문하는
+                  ‘행각(퍼포먼스)’의 변주를 오늘날까지 실천하고 있다.
+                </p>
+              )}
+
+              {/* <p className="m-0">&nbsp;</p>
               <p className="m-0">
                 《성능경의 망친 예술 행각》전은 작가의 시대별 대표작 140여 점을
                 엄선해 미니 회고전의 형식으로 작품 세계를 조망한다. 1970년대
@@ -322,7 +334,7 @@ const Home = ({ onClose }) => {
                 실험미술가가 일상과 예술의 틈새를 탐색하며 제작한 〈그날그날
                 영어〉, 〈손씻기〉, 〈밑그림〉 등의 작품들이 꼬리를 무는 밀도
                 있는 구성으로 전시장에 펼쳐진다.
-              </p>
+              </p> */}
             </div>
             <div className="self-stretch overflow-hidden hidden flex-col items-start justify-start">
               <div className="self-stretch relative h-8 overflow-hidden shrink-0" />

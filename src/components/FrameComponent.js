@@ -37,6 +37,7 @@ const FrameComponent = ({ score, onClose }) => {
         { ...formData }
       );
       console.log("Post request response:", response.data);
+      onClose();
     } catch (error) {
       console.error("Error posting data:", error);
     }
