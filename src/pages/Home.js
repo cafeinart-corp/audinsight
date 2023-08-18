@@ -232,14 +232,15 @@ const Home = ({ onClose }) => {
               </div>
             </div>
           </div>
+
           <div className="self-stretch flex flex-col items-start justify-start text-center text-xs text-white font-ibm-plex-sans">
-            <div className="self-stretch rounded-3xl relative overflow-hidden bg-[url(/public/fixedaspectratio-cover-template1@3x.png)] bg-cover bg-no-repeat bg-[top] h-[664px]">
+            {/* <div className="self-stretch rounded-3xl relative overflow-hidden bg-[url(/public/fixedaspectratio-cover-template1@3x.png)] bg-cover bg-no-repeat bg-[top] h-[664px]">
               <div className="self-stretch absolute inset-0 overflow-hidden bg-[url(/public/fixedaspectratiospacer1@3x.png)] bg-cover bg-no-repeat bg-[top] opacity-0 z-0">
                 <div className="self-stretch absolute inset-0 h-72 transform -rotate-45 origin-0">
                   <div className="self-stretch transform rotate-24.47 origin-0" />
                 </div>
               </div>
-            </div>
+            </div> */}
             <div className="w-full rounded-13xl flex flex-col items-start justify-start max-w-[398px] text-left text-base text-black font-typography-heading-small">
               <div className="self-stretch overflow-hidden flex flex-col items-start justify-start">
                 <div className="self-stretch relative h-6 overflow-hidden shrink-0" />
