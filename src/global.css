@@ -39,6 +39,7 @@
   src: url("./fonts/Nuance-ExtraLight.woff2") format("woff2");
 }
 
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 body {

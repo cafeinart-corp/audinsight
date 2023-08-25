@@ -2,6 +2,7 @@ import React, { useState, useCallback, useEffect } from "react";
 import axios from "axios";
 import FrameComponent from "../components/FrameComponent";
 import PortalPopup from "../components/PortalPopup";
+import Header from "../components/dashboard/Header";
 
 const Detail = ({}) => {
   const [isFrameOpen, setFrameOpen] = useState(false);
@@ -51,23 +52,7 @@ const Detail = ({}) => {
   return (
     <div className="flex justify-center items-center bg-gray-100">
       <a className="[text-decoration:none] bg-white w-full overflow-hidden flex flex-col items-center justify-center gap-[32px] min-w-[320px] max-w-[660px] text-center text-lg text-dimgray font-typography-heading-small">
-        <div className="self-stretch bg-seagreen flex flex-row py-2.5 px-4 items-center justify-between">
-          <img
-            className="relative w-6 h-6 overflow-hidden shrink-0"
-            alt="메뉴바"
-            src="/iconsmenu.svg"
-          />
-          <img
-            className="relative w-[91px] h-4 overflow-hidden shrink-0"
-            alt="로고"
-            src="/logohorizontal.svg"
-          />
-          <img
-            className="relative w-6 h-6 overflow-hidden shrink-0"
-            alt="대쉬보드"
-            src="/iconsuser.svg"
-          />
-        </div>
+        <Header />
         <div className="self-stretch flex flex-col items-center justify-start">
           <div className="self-stretch flex flex-col py-0 px-4 items-start justify-start">
             {/* 작가이름 */}
