@@ -4,7 +4,7 @@ import FrameComponent from "../components/FrameComponent";
 import PortalPopup from "../components/PortalPopup";
 import Header from "../components/dashboard/Header";
 
-const Detail = ({}) => {
+function Detail() {
   const [isFrameOpen, setFrameOpen] = useState(false);
   const [loadArtistData, setArtistData] = useState({}); // API 데이터를 저장할 상태
   const [score, setHiddenLabel] = useState("0");
@@ -358,6 +358,6 @@ const Detail = ({}) => {
       )}
     </div>
   );
-};
+}
 
 export default Detail;
