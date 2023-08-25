@@ -6,9 +6,11 @@ const FrameComponent = ({ score, onClose }) => {
     name: "",
     phone_number: "",
     score,
+    birth_date: "",
     agreeToTerms: false,
     option1: false,
     option2: false,
+    option3: false,
   });
   const handleCheckboxChange = (event) => {
     const { name, checked } = event.target;
@@ -19,6 +21,7 @@ const FrameComponent = ({ score, onClose }) => {
         [name]: checked,
         option1: checked,
         option2: checked,
+        option3: checked,
       }));
     } else {
       setFormData((prevData) => ({
@@ -37,6 +40,7 @@ const FrameComponent = ({ score, onClose }) => {
         { ...formData }
       );
       console.log("Post request response:", response.data);
+      alert("평가가 완료되었습니다.");
       onClose();
     } catch (error) {
       console.error("Error posting data:", error);
@@ -111,6 +115,7 @@ const FrameComponent = ({ score, onClose }) => {
                     onChange={(e) =>
                       setFormData({ ...formData, name: e.target.value })
                     }
+                    required
                   ></input>
                 </div>
                 <div className="self-stretch overflow-hidden hidden flex-col items-start justify-start">
@@ -140,12 +145,13 @@ const FrameComponent = ({ score, onClose }) => {
                   <input
                     // 전화번호 input
                     className="self-stretch relative leading-[28px] bg-gainsboro-100"
-                    type="text"
+                    type="tel"
                     placeholder="전화번호"
                     value={formData.phone_number}
                     onChange={(e) =>
                       setFormData({ ...formData, phone_number: e.target.value })
                     }
+                    required
                   ></input>
                 </div>
                 <div className="self-stretch overflow-hidden hidden flex-col items-start justify-start">
@@ -160,10 +166,10 @@ const FrameComponent = ({ score, onClose }) => {
               </div>
             </div>
           </div>
-          {/* <div className="self-stretch flex flex-col py-0 px-4 items-start justify-start gap-[8px]">
+          <div className="self-stretch flex flex-col py-0 px-4 items-start justify-start gap-[8px]">
             <div className="flex flex-col items-start justify-start text-black font-typography-heading-small">
               <div className="self-stretch relative leading-[24px] font-medium">
-                태어난 년도
+                생일
               </div>
               <div className="self-stretch overflow-hidden hidden flex-col items-start justify-start">
                 <div className="self-stretch relative h-3 overflow-hidden shrink-0" />
@@ -173,14 +179,15 @@ const FrameComponent = ({ score, onClose }) => {
               <div className="my-0 mx-[!important] absolute top-[14px] left-[16px] flex flex-col items-start justify-start z-[0]">
                 <div className="self-stretch relative leading-[28px]">
                   <input
-                    // 생년 input
+                    // 생일 input
                     className="self-stretch relative leading-[28px] bg-gainsboro-100"
-                    type="text"
+                    type="date"
                     placeholder="태어난 년도"
                     value={formData.birth_date}
                     onChange={(e) =>
                       setFormData({ ...formData, birth_date: e.target.value })
                     }
+                    required
                   ></input>
                 </div>
                 <div className="self-stretch overflow-hidden hidden flex-col items-start justify-start">
@@ -194,7 +201,7 @@ const FrameComponent = ({ score, onClose }) => {
                 <div className="self-stretch relative h-7 overflow-hidden shrink-0" />
               </div>
             </div>
-          </div> */}
+          </div>
           <div className="self-stretch bg-white flex flex-col pt-0 px-0 pb-8 items-center justify-start gap-[16px] text-base text-seagreen font-typography-heading-small">
             <div className="self-stretch flex flex-col items-start justify-start gap-[16px]">
               <div className="self-stretch flex flex-col py-0 pr-4 pl-2 items-start justify-start gap-[4px]">
@@ -276,9 +283,12 @@ const FrameComponent = ({ score, onClose }) => {
                   </div>
                   <div className="self-stretch flex flex-row py-1 px-0 items-center justify-start gap-[4px]">
                     <div className="flex flex-row py-0.5 px-2 items-start justify-start">
-                      <img
+                      <input
                         className="relative w-4 h-4"
-                        alt=""
+                        type="checkbox"
+                        name="option3"
+                        checked={formData.option3}
+                        onChange={handleCheckboxChange}
                         src="/iconsradio-button.svg"
                       />
                     </div>

@@ -3,7 +3,7 @@ import axios from "axios";
 import FrameComponent from "../components/FrameComponent";
 import PortalPopup from "../components/PortalPopup";
 
-const Home = ({ onClose }) => {
+const Detail = ({}) => {
   const [isFrameOpen, setFrameOpen] = useState(false);
   const [loadArtistData, setArtistData] = useState({}); // API 데이터를 저장할 상태
   const [score, setHiddenLabel] = useState("0");
@@ -54,17 +54,17 @@ const Home = ({ onClose }) => {
         <div className="self-stretch bg-seagreen flex flex-row py-2.5 px-4 items-center justify-between">
           <img
             className="relative w-6 h-6 overflow-hidden shrink-0"
-            alt=""
+            alt="메뉴바"
             src="/iconsmenu.svg"
           />
           <img
             className="relative w-[91px] h-4 overflow-hidden shrink-0"
-            alt=""
+            alt="로고"
             src="/logohorizontal.svg"
           />
           <img
             className="relative w-6 h-6 overflow-hidden shrink-0"
-            alt=""
+            alt="대쉬보드"
             src="/iconsuser.svg"
           />
         </div>
@@ -255,15 +255,21 @@ const Home = ({ onClose }) => {
                   </div>
                 </div>
                 <div className="absolute top-[0px] left-[80px] flex flex-col items-start justify-start text-dimgray">
-                  <div className="self-stretch relative leading-[20px] font-medium">
-                    2019
-                  </div>
+                  {loadArtistData.mfg_date ? (
+                    <div className="self-stretch relative leading-[20px] font-medium">
+                      {loadArtistData.mfg_date.substring(0, 4)}
+                    </div>
+                  ) : (
+                    <div className="self-stretch relative leading-[20px] font-medium">
+                      2019
+                    </div>
+                  )}
                   <div className="self-stretch overflow-hidden flex flex-col items-start justify-start">
                     <div className="self-stretch relative h-2 overflow-hidden shrink-0" />
                   </div>
                 </div>
               </div>
-              <div className="relative w-[168px] h-7">
+              <div className="relative w-[426px] h-7">
                 <div className="absolute top-[0px] left-[0px] flex flex-col items-start justify-start">
                   <div className="self-stretch relative leading-[20px] font-medium">
                     크기
@@ -273,9 +279,15 @@ const Home = ({ onClose }) => {
                   </div>
                 </div>
                 <div className="absolute top-[0px] left-[80px] flex flex-col items-start justify-start text-dimgray">
-                  <div className="self-stretch relative leading-[20px] font-medium">
-                    53 × 45 cm
-                  </div>
+                  {loadArtistData.obj_size ? (
+                    <div className="self-stretch relative leading-[20px] font-medium">
+                      {loadArtistData.obj_size}
+                    </div>
+                  ) : (
+                    <div className="self-stretch relative leading-[20px] font-medium">
+                      53 × 45 cm
+                    </div>
+                  )}
                   <div className="self-stretch overflow-hidden flex flex-col items-start justify-start">
                     <div className="self-stretch relative h-2 overflow-hidden shrink-0" />
                   </div>
@@ -291,9 +303,16 @@ const Home = ({ onClose }) => {
                   </div>
                 </div>
                 <div className="absolute top-[0px] left-[80px] flex flex-col items-start justify-start text-dimgray">
-                  <div className="self-stretch relative leading-[20px] font-medium">
-                    Oil on Canvas
-                  </div>
+                  {loadArtistData.material ? (
+                    <div className="self-stretch relative leading-[20px] font-medium">
+                      {loadArtistData.material}
+                    </div>
+                  ) : (
+                    <div className="self-stretch relative leading-[20px] font-medium">
+                      {"Oil on Canvas"}
+                    </div>
+                  )}
+                  <div className="self-stretch relative leading-[20px] font-medium"></div>
                   <div className="self-stretch overflow-hidden flex flex-col items-start justify-start">
                     <div className="self-stretch relative h-2 overflow-hidden shrink-0" />
                   </div>
@@ -356,4 +375,4 @@ const Home = ({ onClose }) => {
   );
 };
 
-export default Home;
+export default Detail;
