@@ -325,7 +325,7 @@ const FrameComponent = ({ score, onClose }) => {
                     <img
                       className="relative w-5 h-5"
                       alt=""
-                      src="/iconsfavorite.svg"
+                      src="/iconschevron-right.svg"
                     />
                   </div>
                   <div className="self-stretch hidden flex-row py-1 px-0 items-center justify-start gap-[4px]">
@@ -436,7 +436,7 @@ const FrameComponent = ({ score, onClose }) => {
                     <img
                       className="relative w-6 h-6 overflow-hidden shrink-0 hidden"
                       alt=""
-                      src="/iconsfavorite.svg"
+                      src="/iconsfavorite1.svg"
                     />
                   </div>
                 </div>
