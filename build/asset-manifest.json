@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2fe0dd01.css",
+    "main.js": "/static/js/main.af69b63b.js",
+    "static/js/787.2b0f949a.chunk.js": "/static/js/787.2b0f949a.chunk.js",
+    "static/media/fixedaspectratio-cover-template@3x.png": "/static/media/fixedaspectratio-cover-template@3x.3534515ee62f01ff84f8.png",
+    "static/media/Nuance-ExtraBold.woff2": "/static/media/Nuance-ExtraBold.f1dc84fdcf9a0b38d39c.woff2",
+    "static/media/Nuance-Bold.woff2": "/static/media/Nuance-Bold.c6d2ce9290f07b530be4.woff2",
+    "static/media/Nuance-SemiBold.woff2": "/static/media/Nuance-SemiBold.f5190532b97f01136c3a.woff2",
+    "static/media/Nuance-Medium.woff2": "/static/media/Nuance-Medium.381a7ec4fc1e01946e1e.woff2",
+    "static/media/Nuance-Regular.woff2": "/static/media/Nuance-Regular.2da9c04b81adac0023bf.woff2",
+    "static/media/Nuance-Light.woff2": "/static/media/Nuance-Light.3b75c633e0d3d09d5a05.woff2",
+    "static/media/fixedaspectratio-cover-template1@3x.png": "/static/media/fixedaspectratio-cover-template1@3x.9f40bb080dac61f41f9e.png",
+    "static/media/Nuance-ExtraLight.woff2": "/static/media/Nuance-ExtraLight.5d93bcc4e0b5aa8dc477.woff2",
+    "index.html": "/index.html",
+    "main.2fe0dd01.css.map": "/static/css/main.2fe0dd01.css.map",
+    "main.af69b63b.js.map": "/static/js/main.af69b63b.js.map",
+    "787.2b0f949a.chunk.js.map": "/static/js/787.2b0f949a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2fe0dd01.css",
+    "static/js/main.af69b63b.js"
+  ]
+}
