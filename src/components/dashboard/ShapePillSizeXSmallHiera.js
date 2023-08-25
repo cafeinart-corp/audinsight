@@ -1,4 +1,5 @@
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
+import ModalComponent from "./ModalComponent";
 
 const ShapePillSizeXSmallHiera = ({
   iconsFavorite,
@@ -9,6 +10,15 @@ const ShapePillSizeXSmallHiera = ({
   shapePillSizeXSmallHieraPosition,
   labelColor,
 }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
   const shapePillSizeXSmallHieraStyle = useMemo(() => {
     return {
       position: shapePillSizeXSmallHieraPosition,
@@ -25,6 +35,7 @@ const ShapePillSizeXSmallHiera = ({
     <div
       className="relative rounded-9xl bg-gainsboro-100 flex flex-col py-1.5 px-0 items-center justify-center text-center text-xs text-black font-typography-heading-large"
       style={shapePillSizeXSmallHieraStyle}
+      onClick={console.log("clicked")}
     >
       <div className="overflow-hidden flex flex-row py-0 px-2 items-center justify-center gap-[8px]">
         {iconLeading && (

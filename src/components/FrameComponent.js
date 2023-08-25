@@ -400,6 +400,7 @@ const FrameComponent = ({ score, onClose }) => {
                   <button
                     type="submit"
                     className="overflow-hidden flex flex-row py-0 px-2 items-center justify-center gap-[8px] bg-seagreen text-white"
+                    style={{ cursor: "pointer" }}
                   >
                     <img
                       className="relative w-6 h-6 overflow-hidden shrink-0"
