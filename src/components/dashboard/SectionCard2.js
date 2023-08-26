@@ -168,7 +168,16 @@ function SectionCard2() {
                   </div>
                 </div>
                 <div className="w-36 flex flex-col items-center justify-start">
-                  <b className="self-stretch relative leading-[28px]">740명</b>
+                  {sortedData[1] ? (
+                    <b className="self-stretch relative leading-[28px]">
+                      {sortedData[1].value}명
+                    </b>
+                  ) : (
+                    <b className="self-stretch relative leading-[28px]">
+                      740명
+                    </b>
+                  )}
+
                   <div className="self-stretch overflow-hidden hidden flex-col items-start justify-start">
                     <div className="self-stretch relative h-3 overflow-hidden shrink-0" />
                   </div>
@@ -176,15 +185,29 @@ function SectionCard2() {
               </div>
               <div className="self-stretch flex flex-row items-start justify-center text-cornflowerblue">
                 <div className="flex-1 flex flex-col items-center justify-start">
-                  <b className="self-stretch relative leading-[28px]">
-                    2023.08.09. (금)
-                  </b>
+                  {sortedData[2] ? (
+                    <b className="self-stretch relative leading-[28px]">
+                      {sortedData[2].date}
+                    </b>
+                  ) : (
+                    <b className="self-stretch relative leading-[28px]">
+                      2023.08.09. (금)
+                    </b>
+                  )}
                   <div className="self-stretch overflow-hidden hidden flex-col items-start justify-start">
                     <div className="self-stretch relative h-3 overflow-hidden shrink-0" />
                   </div>
                 </div>
                 <div className="w-36 flex flex-col items-center justify-start">
-                  <b className="self-stretch relative leading-[28px]">541명</b>
+                  {sortedData[2] ? (
+                    <b className="self-stretch relative leading-[28px]">
+                      {sortedData[2].value}명
+                    </b>
+                  ) : (
+                    <b className="self-stretch relative leading-[28px]">
+                      541명
+                    </b>
+                  )}
                   <div className="self-stretch overflow-hidden hidden flex-col items-start justify-start">
                     <div className="self-stretch relative h-3 overflow-hidden shrink-0" />
                   </div>
@@ -192,15 +215,29 @@ function SectionCard2() {
               </div>
               <div className="self-stretch flex flex-row items-start justify-center text-lightskyblue">
                 <div className="flex-1 flex flex-col items-center justify-start">
-                  <b className="self-stretch relative leading-[28px]">
-                    2023.08.13. (수)
-                  </b>
+                  {sortedData[3] ? (
+                    <b className="self-stretch relative leading-[28px]">
+                      {sortedData[3].date}
+                    </b>
+                  ) : (
+                    <b className="self-stretch relative leading-[28px]">
+                      2023.08.13. (수)
+                    </b>
+                  )}
                   <div className="self-stretch overflow-hidden hidden flex-col items-start justify-start">
                     <div className="self-stretch relative h-3 overflow-hidden shrink-0" />
                   </div>
                 </div>
                 <div className="w-36 flex flex-col items-center justify-start">
-                  <b className="self-stretch relative leading-[28px]">524명</b>
+                  {sortedData[3] ? (
+                    <b className="self-stretch relative leading-[28px]">
+                      {sortedData[3].value}명
+                    </b>
+                  ) : (
+                    <b className="self-stretch relative leading-[28px]">
+                      524명
+                    </b>
+                  )}
                   <div className="self-stretch overflow-hidden hidden flex-col items-start justify-start">
                     <div className="self-stretch relative h-3 overflow-hidden shrink-0" />
                   </div>
@@ -208,15 +245,29 @@ function SectionCard2() {
               </div>
               <div className="self-stretch flex flex-row items-start justify-center text-lavender">
                 <div className="flex-1 flex flex-col items-center justify-start">
-                  <b className="self-stretch relative leading-[28px]">
-                    2023.08.01. (월)
-                  </b>
+                  {sortedData[4] ? (
+                    <b className="self-stretch relative leading-[28px]">
+                      {sortedData[4].date}
+                    </b>
+                  ) : (
+                    <b className="self-stretch relative leading-[28px]">
+                      2023.08.01. (월)
+                    </b>
+                  )}
                   <div className="self-stretch overflow-hidden hidden flex-col items-start justify-start">
                     <div className="self-stretch relative h-3 overflow-hidden shrink-0" />
                   </div>
                 </div>
                 <div className="w-36 flex flex-col items-center justify-start">
-                  <b className="self-stretch relative leading-[28px]">472명</b>
+                  {sortedData[4] ? (
+                    <b className="self-stretch relative leading-[28px]">
+                      {sortedData[4].value}명
+                    </b>
+                  ) : (
+                    <b className="self-stretch relative leading-[28px]">
+                      472명
+                    </b>
+                  )}
                   <div className="self-stretch overflow-hidden hidden flex-col items-start justify-start">
                     <div className="self-stretch relative h-3 overflow-hidden shrink-0" />
                   </div>
