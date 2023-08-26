@@ -1,25 +1,45 @@
 import "react-vis/dist/style.css";
 import React, { useState, useEffect } from "react";
 import { RadialChart } from "react-vis";
-import dummy from "../../data/dummy.json";
+// import dummy from "../../data/dummy.json";
+import axios from "axios";
 
 function DonutChart() {
+  const [data, setData] = useState(null); // 데이터 초기 상태를 null로 설정
   const [dataForChart, setDataForChart] = useState([]);
-  const dummyData = dummy.age_ratio_vote;
+  useEffect(() => {
+    axios
+      .get("https://cafeinart.du.r.appspot.com/v1/artwork/1/da?format=json")
+      .then((response) => {
+        setData(response.data);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+  }, []);
 
   useEffect(() => {
+    if (data) {
+      updateChartData();
+    }
+  }, [data]);
+
+  const updateChartData = () => {
+    const dummyData = data.da_data.age_ratio_vote;
     // JSON 데이터를 가공하여 파이 차트의 각도를 계산
-    const sum = Object.entries(dummy.age_ratio).map(([category, val]) => {
-      return val;
-    });
+    const sum = Object.entries(data.da_data.age_ratio).map(
+      ([category, val]) => {
+        return val;
+      }
+    );
     const allVote = sum.reduce((a, b) => a + b, 0);
 
-    const data = Object.entries(dummyData).map(([category, values]) => ({
+    const da = Object.entries(dummyData).map(([category, values]) => ({
       angle: ((values[0] - values[1]) / allVote) * 360,
       label: category * 5 + " ~ " + (category * 5 + 4) + "세",
     }));
-    setDataForChart(data);
-  }, []);
+    setDataForChart(da);
+  };
 
   return (
     <RadialChart

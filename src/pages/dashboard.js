@@ -10,6 +10,9 @@ import SectionCard4 from "../components/dashboard/SectionCard4";
 import ArtworkCard from "../components/dashboard/ArtworkCard";
 import Footer from "../components/dashboard/Footer";
 
+import axios from "axios";
+axios.defaults.baseURL = "https://cafeinart.du.r.appspot.com/v1/artwork/1";
+
 function dashboard() {
   return (
     <a className="[text-decoration:none] bg-white w-full overflow-hidden flex flex-col items-center justify-center gap-[32px] min-w-[320px] text-center text-lg text-dimgray font-typography-heading-small">

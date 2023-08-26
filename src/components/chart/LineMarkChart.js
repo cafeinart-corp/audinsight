@@ -8,17 +8,32 @@ import {
   GradientDefs,
 } from "react-vis";
 import "react-vis/dist/style.css";
-import data from "../../data/dummy.json";
+import axios from "axios";
 
 function LineMarkChart() {
-  const [dataForChart, setDataForChart] = useState([]);
+  const [data, setData] = useState(null); // 데이터 초기 상태를 null로 설정
+  const [dataForChart, setDataForChart] = useState([]); // 차트 데이터 초기 상태를 빈 배열로 설정
 
   useEffect(() => {
-    updateChartData();
+    axios
+      .get("https://cafeinart.du.r.appspot.com/v1/artwork/1/da?format=json")
+      .then((response) => {
+        setData(response.data);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
   }, []);
 
+  // 데이터가 업데이트되면 차트 데이터도 업데이트
+  useEffect(() => {
+    if (data) {
+      updateChartData();
+    }
+  }, [data]);
+
   const updateChartData = () => {
-    const dailyViewer = data.daily_viewer;
+    const dailyViewer = data.da_data.daily_viewer;
     const dataForChart = [];
 
     for (const date in dailyViewer) {
@@ -29,6 +44,11 @@ function LineMarkChart() {
 
     setDataForChart(dataForChart);
   };
+
+  if (!data) {
+    // 데이터가 로딩 중일 때 로딩 상태를 표시
+    return <div>Loading...</div>;
+  }
 
   return (
     <div className="self-stretch flex flex-col items-center justify-start">

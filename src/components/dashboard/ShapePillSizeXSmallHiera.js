@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import React, { useState, useMemo } from "react";
 import ModalComponent from "./ModalComponent";
 import "./styles.css";
 import Modal from "../modal/Modal";
@@ -13,8 +13,12 @@ const ShapePillSizeXSmallHiera = ({
 }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const toggleModal = () => {
-    setIsModalOpen(!isModalOpen);
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
   };
 
   const labelStyle = useMemo(() => {
@@ -26,7 +30,7 @@ const ShapePillSizeXSmallHiera = ({
   return (
     <div
       className="relative rounded-9xl bg-gainsboro-100 flex flex-col py-1.5 px-0 items-center justify-center text-center text-xs text-black font-typography-heading-large"
-      onClick={toggleModal} // Toggle the modal state when clicking on the component
+      onClick={openModal}
     >
       <div className="overflow-hidden flex flex-row py-0 px-2 items-center justify-center gap-[8px]">
         {iconLeading && (
@@ -52,7 +56,7 @@ const ShapePillSizeXSmallHiera = ({
       {/* Conditionally render the ModalComponent based on isModalOpen */}
       {isModalOpen && (
         <div className="modal-overlay">
-          <ModalComponent isOpen={isModalOpen} onClose={toggleModal} />
+          <ModalComponent isOpen={isModalOpen} onClose={closeModal} />
         </div>
       )}
     </div>

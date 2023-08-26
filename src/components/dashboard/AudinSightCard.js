@@ -1,8 +1,28 @@
 import LogoHorizontal from "./LogoHorizontal";
 import Size56px from "./Size56px";
 import ClassHeadingSizeXSmall from "./ClassHeadingSizeXSmall";
+import axios from "axios";
+import { useEffect, useState } from "react";
 
 function AudinSightCard() {
+  const [data, setData] = useState({});
+  const value = data.da_data;
+  const artist = data.artist_name
+    ? `${data.artist_name} 작가님`
+    : "박세연 작가님";
+
+  useEffect(() => {
+    // Axios를 사용하여 데이터 가져오기
+    axios
+      .get("/da?format=json")
+      .then((response) => {
+        setData(response.data);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+  }, []);
+
   return (
     <div
       className="elf-stretch flex flex-col items-start justify-start gap-[32px] bg-cover bg-no-repeat"
@@ -72,7 +92,7 @@ function AudinSightCard() {
         />
         <ClassHeadingSizeXSmall
           wereTheLargestGalleryInTh="안녕하세요,"
-          prop="박세연 작가님"
+          prop={artist}
           classHeadingSizeXSmallPosition="unset"
           classHeadingSizeXSmallAlignItems="flex-start"
           classHeadingSizeXSmallAlignSelf="stretch"

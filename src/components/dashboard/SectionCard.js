@@ -4,7 +4,7 @@ import ClassLabelSizeSmall from "./ClassLabelSizeSmall";
 import ShapePillSizeMediumHiera from "./ShapePillSizeMediumHiera";
 import ShapePillSizeXSmallHiera from "./ShapePillSizeXSmallHiera";
 
-const SectionCard = () => {
+function SectionCard() {
   return (
     <div className="self-stretch flex flex-col py-0 px-4 items-start justify-start text-center text-13xl text-dimgray-100 font-typography-heading-large">
       <div className="self-stretch flex flex-col items-start justify-start">
@@ -276,6 +276,6 @@ const SectionCard = () => {
       />
     </div>
   );
-};
+}
 
 export default SectionCard;
