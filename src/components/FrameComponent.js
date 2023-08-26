@@ -180,7 +180,7 @@ const FrameComponent = ({ score, onClose }) => {
                 <div className="self-stretch relative leading-[28px]">
                   <input
                     // 생일 input
-                    className="self-stretch relative leading-[28px] bg-gainsboro-100"
+                    className="self-stretch relative leading-[28px] bg-gainsboro-100 text-black"
                     type="date"
                     placeholder="태어난 년도"
                     value={formData.birth_date}
