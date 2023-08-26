@@ -46,6 +46,8 @@ const EvaluationSection1 = () => {
             <b className="self-stretch relative leading-[40px]">
               <p className="m-0">
                 <span>관람객 3,981명 중</span>
+              </p>
+              <p className="m-0">
                 <span className="text-royalblue">1,990명이</span>
                 <span className="text-black"> 작품을</span>
               </p>
