@@ -165,6 +165,15 @@ const SectionCard2 = () => {
           </div>
         </div>
       </div>
+
+      <Size56px
+        size56pxWidth="unset"
+        size56pxPosition="unset"
+        size56pxAlignSelf="stretch"
+        size56pxZIndex="unset"
+        spacerBackgroundColor="unset"
+        spacerHeight="56px"
+      />
       <ClassLabelSizeSmall
         wereTheLargestGalleryInTh="획득한 배지"
         showWereTheLargest
@@ -186,6 +195,7 @@ const SectionCard2 = () => {
         wereTheLargestAlignItems="flex-start"
         wereTheLargestJustifyContent="flex-start"
       />
+
       <SectionCard1
         iconsChevronRight="/iconschevron-right.svg"
         label="일요일은 내가 O파게티 요리사"

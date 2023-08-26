@@ -72,6 +72,15 @@ const EvaluationSection1 = () => {
             showWereTheLargest
           />
         </div>
+
+        <Size56px
+          size56pxWidth="unset"
+          size56pxPosition="unset"
+          size56pxAlignSelf="stretch"
+          size56pxZIndex="unset"
+          spacerBackgroundColor="unset"
+          spacerHeight="56px"
+        />
         <div className="self-stretch flex flex-col items-center justify-start text-base text-dimgray-100">
           <ClassLabelSizeSmall
             wereTheLargestGalleryInTh="획득한 배지"

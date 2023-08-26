@@ -258,6 +258,7 @@ const SectionCard = () => {
               <div className="self-stretch relative leading-[20px] font-medium">
                 획득한 뱃지가 없어요 :(
               </div>
+
               <div className="self-stretch overflow-hidden hidden flex-col items-start justify-start">
                 <div className="self-stretch relative h-2 overflow-hidden shrink-0" />
               </div>

@@ -71,6 +71,14 @@ const EvaluationSection2 = () => {
             showWereTheLargest
           />
 
+          <Size56px
+            size56pxWidth="unset"
+            size56pxPosition="unset"
+            size56pxAlignSelf="stretch"
+            size56pxZIndex="unset"
+            spacerBackgroundColor="unset"
+            spacerHeight="56px"
+          />
           <ClassLabelSizeSmall
             wereTheLargestGalleryInTh="획득한 배지"
             showWereTheLargest
