@@ -1,6 +1,4 @@
 import React, { useState, useMemo } from "react";
-import ModalComponent from "./ModalComponent";
-import "./styles.css";
 import Modal from "../modal/Modal";
 
 const ShapePillSizeXSmallHiera = ({
@@ -52,13 +50,7 @@ const ShapePillSizeXSmallHiera = ({
         )}
       </div>
       <div className="relative w-[52px] h-0" />
-
-      {/* Conditionally render the ModalComponent based on isModalOpen */}
-      {isModalOpen && (
-        <div className="modal-overlay">
-          <Modal isOpen={isModalOpen} onClose={closeModal} />
-        </div>
-      )}
+      {/* {isModalOpen && <Modal isOpen={isModalOpen} onClose={closeModal} />} */}
     </div>
   );
 };

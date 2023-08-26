@@ -1,39 +1,21 @@
-/* 모달 열린 상태 */
-.modal.open {
-  display: fixed;
-}
-
-/* 모달 컨테이너 스타일 */
-.modal-container {
+/* modal.css */
+.modal {
+  display: none;
   position: fixed;
-  width: 400px;
-  background-color: white;
-  padding: 16px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  transition: top 0.3s ease, left 0.3s ease;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease-out;
+  transform: translateY(100%);
 }
 
-/* 모달 헤더 스타일 */
-.modal-header {
-  padding: 8px 0;
-  font-weight: bold;
-  border-bottom: 1px solid #ccc;
+.modal.show {
+  display: block;
+  transform: translateY(0);
 }
 
-/* 모달 드래그 중인 상태 */
-.modal-container.dragging {
-  cursor: grab;
-}
-
-/* 모달 열기/닫기 버튼 스타일 */
-button {
-  margin-bottom: 16px;
-  cursor: pointer;
-}
-
-/* 모달 내용 스타일 */
 .modal-content {
-  padding: 16px;
+  background-color: white;
+  padding: 20px;
 }

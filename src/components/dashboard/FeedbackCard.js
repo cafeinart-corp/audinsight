@@ -55,7 +55,6 @@ const FeedbackCard = () => {
       setSumOfBadValues(badValues - eachBadValue[0]);
     }
   }, [data]);
-  console.log(data);
 
   return (
     <div className="self-stretch flex flex-col items-start justify-start text-center text-sm text-dimgray-100 font-typography-heading-large">

@@ -40,6 +40,7 @@ function SectionCard() {
       setSumOfValues(values - eachValue[0]);
     }
   }, [data]);
+
   return (
     <div className="self-stretch flex flex-col py-0 px-4 items-start justify-start text-center text-13xl text-dimgray-100 font-typography-heading-large">
       <div className="self-stretch flex flex-col items-start justify-start">
