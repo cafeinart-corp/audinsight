@@ -8,7 +8,7 @@ import {
   GradientDefs,
 } from "react-vis";
 import "react-vis/dist/style.css";
-import dummy from "../../data/output.json";
+import data from "../../data/dummy.json";
 
 function LineMarkChart() {
   const [dataForChart, setDataForChart] = useState([]);
@@ -32,11 +32,15 @@ function LineMarkChart() {
   );
 
   const updateChartData = () => {
-    const dataArray = Object.values(dummy);
-    const dataForChart = dataArray.map((item) => ({
-      x: item.date,
-      y: item.amount,
-    }));
+    const dailyViewer = data.daily_viewer;
+    const dataForChart = [];
+
+    for (const date in dailyViewer) {
+      if (dailyViewer.hasOwnProperty(date)) {
+        dataForChart.push({ x: date, y: dailyViewer[date] });
+      }
+    }
+
     setDataForChart(dataForChart);
   };
 
