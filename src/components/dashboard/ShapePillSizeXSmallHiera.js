@@ -56,7 +56,7 @@ const ShapePillSizeXSmallHiera = ({
       {/* Conditionally render the ModalComponent based on isModalOpen */}
       {isModalOpen && (
         <div className="modal-overlay">
-          <ModalComponent isOpen={isModalOpen} onClose={closeModal} />
+          <Modal isOpen={isModalOpen} onClose={closeModal} />
         </div>
       )}
     </div>

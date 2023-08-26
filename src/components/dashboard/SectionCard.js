@@ -3,8 +3,43 @@ import Size56px from "./Size56px";
 import ClassLabelSizeSmall from "./ClassLabelSizeSmall";
 import ShapePillSizeMediumHiera from "./ShapePillSizeMediumHiera";
 import ShapePillSizeXSmallHiera from "./ShapePillSizeXSmallHiera";
+import axios from "axios";
+import { useEffect, useState } from "react";
 
 function SectionCard() {
+  const [data, setData] = useState({ da_data: { keyword: [] } });
+  const [topWords, setTopWords] = useState([]);
+  const [eachValue, setEachValue] = useState([0, 0, 0, 0, 0, 0]);
+  const [sumOfValues, setSumOfValues] = useState(0);
+
+  useEffect(() => {
+    // Axios를 사용하여 데이터 가져오기
+    axios
+      .get("/da?format=json")
+      .then((response) => {
+        setData(response.data);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+  }, []);
+
+  useEffect(() => {
+    if (data.da_data.keyword.length > 0) {
+      const jsonData = data.da_data.keyword[0].sort((a, b) => b[1] - a[1]);
+      // 상위 6개 배열 선택
+      const topItems = jsonData.slice(0, 6);
+      // 상위 6개 객체를 매핑하고 정보 출력
+      const words = topItems.map((obj) => obj[0]);
+      const eachValue = topItems.map((obj) => obj[1]);
+      const values = topItems.reduce((acc, obj) => acc + obj[1], 0);
+
+      // top5Words와 sumOfValues 상태 업데이트
+      setEachValue(eachValue);
+      setTopWords(words);
+      setSumOfValues(values - eachValue[0]);
+    }
+  }, [data]);
   return (
     <div className="self-stretch flex flex-col py-0 px-4 items-start justify-start text-center text-13xl text-dimgray-100 font-typography-heading-large">
       <div className="self-stretch flex flex-col items-start justify-start">
@@ -46,7 +81,7 @@ function SectionCard() {
             <b className="self-stretch relative leading-[40px]">
               <p className="m-0">
                 <span className="text-black">{`작품 `}</span>
-                <span className="text-royalblue">창파</span>
+                <span className="text-royalblue">{data.title}</span>
                 <span>에 대해</span>
               </p>
               <p className="m-0 text-royalblue">
@@ -72,7 +107,7 @@ function SectionCard() {
               <div className="self-stretch flex flex-row flex-wrap items-start justify-center gap-[8px]">
                 <ShapePillSizeMediumHiera
                   iconsFavorite="/iconshashtag.svg"
-                  label="차가워요"
+                  label={topWords[0]}
                   iconsFavorite1="/iconschevron-right.svg"
                   iconLeading
                   iconTrailing={false}
@@ -80,6 +115,7 @@ function SectionCard() {
                   shapePillSizeMediumHieraPadding="unset"
                   shapePillSizeMediumHieraBoxSizing="unset"
                   frameDivBackgroundColor="#266ef1"
+                  opacity={1}
                   frameDivPadding="14px 0px"
                   iconsFavoriteWidth="20px"
                   iconsFavoriteHeight="20px"
@@ -89,7 +125,7 @@ function SectionCard() {
                 />
                 <ShapePillSizeMediumHiera
                   iconsFavorite="/iconshashtag.svg"
-                  label="신비로워요"
+                  label={topWords[1]}
                   iconsFavorite1="/iconschevron-right.svg"
                   iconLeading
                   iconTrailing={false}
@@ -97,6 +133,7 @@ function SectionCard() {
                   shapePillSizeMediumHieraPadding="unset"
                   shapePillSizeMediumHieraBoxSizing="unset"
                   frameDivBackgroundColor="#266ef1"
+                  opacity={(eachValue[1] / sumOfValues) * 1.5}
                   frameDivPadding="14px 0px"
                   iconsFavoriteWidth="20px"
                   iconsFavoriteHeight="20px"
@@ -106,7 +143,7 @@ function SectionCard() {
                 />
                 <ShapePillSizeMediumHiera
                   iconsFavorite="/iconshashtag1.svg"
-                  label="압도적이에요"
+                  label={topWords[2]}
                   iconsFavorite1="/iconschevron-right.svg"
                   iconLeading
                   iconTrailing={false}
@@ -114,6 +151,7 @@ function SectionCard() {
                   shapePillSizeMediumHieraPadding="unset"
                   shapePillSizeMediumHieraBoxSizing="unset"
                   frameDivBackgroundColor="#266ef1"
+                  opacity={(eachValue[2] / sumOfValues) * 3}
                   frameDivPadding="14px 0px"
                   iconsFavoriteWidth="20px"
                   iconsFavoriteHeight="20px"
@@ -123,7 +161,7 @@ function SectionCard() {
                 />
                 <ShapePillSizeMediumHiera
                   iconsFavorite="/iconshashtag1.svg"
-                  label="차가워요"
+                  label={topWords[3]}
                   iconsFavorite1="/iconschevron-right.svg"
                   iconLeading
                   iconTrailing={false}
@@ -131,6 +169,7 @@ function SectionCard() {
                   shapePillSizeMediumHieraPadding="unset"
                   shapePillSizeMediumHieraBoxSizing="unset"
                   frameDivBackgroundColor="#266ef1"
+                  opacity={(eachValue[3] / sumOfValues) * 3}
                   frameDivPadding="14px 0px"
                   iconsFavoriteWidth="20px"
                   iconsFavoriteHeight="20px"
@@ -140,7 +179,7 @@ function SectionCard() {
                 />
                 <ShapePillSizeMediumHiera
                   iconsFavorite="/iconshashtag1.svg"
-                  label="차가워요"
+                  label={topWords[4]}
                   iconsFavorite1="/iconschevron-right.svg"
                   iconLeading
                   iconTrailing={false}
@@ -148,6 +187,7 @@ function SectionCard() {
                   shapePillSizeMediumHieraPadding="unset"
                   shapePillSizeMediumHieraBoxSizing="unset"
                   frameDivBackgroundColor="#266ef1"
+                  opacity={(eachValue[4] / sumOfValues) * 3}
                   frameDivPadding="14px 0px"
                   iconsFavoriteWidth="20px"
                   iconsFavoriteHeight="20px"
@@ -157,7 +197,7 @@ function SectionCard() {
                 />
                 <ShapePillSizeMediumHiera
                   iconsFavorite="/iconshashtag.svg"
-                  label="차가워요"
+                  label={topWords[5]}
                   iconsFavorite1="/iconschevron-right.svg"
                   iconLeading
                   iconTrailing={false}
@@ -165,6 +205,7 @@ function SectionCard() {
                   shapePillSizeMediumHieraPadding="unset"
                   shapePillSizeMediumHieraBoxSizing="unset"
                   frameDivBackgroundColor="#266ef1"
+                  opacity={(eachValue[5] / sumOfValues) * 1.5}
                   frameDivPadding="14px 0px"
                   iconsFavoriteWidth="20px"
                   iconsFavoriteHeight="20px"

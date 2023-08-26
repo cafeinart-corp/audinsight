@@ -6,6 +6,7 @@ const ShapePillSizeMediumHiera = ({
   iconsFavorite1,
   iconLeading = true,
   iconTrailing = true,
+  opacity = 1, // 기본값은 완전 불투명
   shapePillSizeMediumHieraPosition,
   shapePillSizeMediumHieraPadding,
   shapePillSizeMediumHieraBoxSizing,
@@ -17,6 +18,9 @@ const ShapePillSizeMediumHiera = ({
   iconsFavoriteWidth1,
   iconsFavoriteHeight1,
 }) => {
+  // opacity 값을 최소 0.3, 최대 1로 제한
+  const clampedOpacity = Math.min(1, Math.max(0.3, opacity));
+
   const shapePillSizeMediumHieraStyle = useMemo(() => {
     return {
       position: shapePillSizeMediumHieraPosition,
@@ -33,8 +37,9 @@ const ShapePillSizeMediumHiera = ({
     return {
       backgroundColor: frameDivBackgroundColor,
       padding: frameDivPadding,
+      opacity: clampedOpacity, // 제한된 opacity 값을 적용
     };
-  }, [frameDivBackgroundColor, frameDivPadding]);
+  }, [frameDivBackgroundColor, frameDivPadding, clampedOpacity]);
 
   const iconsFavoriteStyle = useMemo(() => {
     return {

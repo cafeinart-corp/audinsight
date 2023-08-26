@@ -5,7 +5,7 @@ import PieChart from "../chart/PieChart";
 import EvaluationSection from "./EvaluationSection";
 import HowBattery from "../chart/HowBattery";
 
-const SectionCardFormFilter = () => {
+function SectionCardFormFilter() {
   return (
     <div className="self-stretch flex flex-col py-0 px-4 items-start justify-start text-center text-13xl text-black font-typography-heading-large">
       <div className="self-stretch flex flex-col items-start justify-start">
@@ -177,6 +177,6 @@ const SectionCardFormFilter = () => {
       />
     </div>
   );
-};
+}
 
 export default SectionCardFormFilter;
