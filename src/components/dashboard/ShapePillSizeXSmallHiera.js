@@ -1,5 +1,7 @@
 import { useMemo, useState } from "react";
 import ModalComponent from "./ModalComponent";
+import "./styles.css";
+import Modal from "../modal/Modal";
 
 const ShapePillSizeXSmallHiera = ({
   iconsFavorite,
@@ -7,7 +9,6 @@ const ShapePillSizeXSmallHiera = ({
   iconsFavorite1,
   iconLeading = true,
   iconTrailing = true,
-  shapePillSizeXSmallHieraPosition,
   labelColor,
 }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -20,18 +21,6 @@ const ShapePillSizeXSmallHiera = ({
     setIsModalOpen(false);
   };
 
-  const handleDivClick = () => {
-    openModal();
-    console.log("handleDivClick");
-    <ModalComponent isOpen={isModalOpen} onClose={closeModal} />;
-  };
-
-  const shapePillSizeXSmallHieraStyle = useMemo(() => {
-    return {
-      position: shapePillSizeXSmallHieraPosition,
-    };
-  }, [shapePillSizeXSmallHieraPosition]);
-
   const labelStyle = useMemo(() => {
     return {
       color: labelColor,
@@ -41,8 +30,7 @@ const ShapePillSizeXSmallHiera = ({
   return (
     <div
       className="relative rounded-9xl bg-gainsboro-100 flex flex-col py-1.5 px-0 items-center justify-center text-center text-xs text-black font-typography-heading-large"
-      style={shapePillSizeXSmallHieraStyle}
-      onClick={handleDivClick}
+      onClick={openModal}
     >
       <div className="overflow-hidden flex flex-row py-0 px-2 items-center justify-center gap-[8px]">
         {iconLeading && (
@@ -64,6 +52,13 @@ const ShapePillSizeXSmallHiera = ({
         )}
       </div>
       <div className="relative w-[52px] h-0" />
+
+      {/* Conditionally render the ModalComponent based on isModalOpen */}
+      {isModalOpen && (
+        <div className="modal-overlay">
+          <Modal onClose={closeModal} />
+        </div>
+      )}
     </div>
   );
 };

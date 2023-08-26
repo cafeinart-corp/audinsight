@@ -2,6 +2,8 @@ import ClassCell from "./ClassCell";
 import Size56px from "./Size56px";
 import ClassLabelSizeSmall from "./ClassLabelSizeSmall";
 import PieChart from "../chart/PieChart";
+import EvaluationSection from "./EvaluationSection";
+import HowBattery from "../chart/HowBattery";
 
 const SectionCardFormFilter = () => {
   return (
@@ -68,18 +70,8 @@ const SectionCardFormFilter = () => {
           <div className="self-stretch flex flex-col items-center justify-start text-sm text-white">
             <div className="w-[398px] flex flex-col items-center justify-start">
               <div className="self-stretch flex flex-col items-center justify-start relative">
-                <div className="self-stretch relative bg-whitesmoke h-10 z-[0]" />
-                <div className="absolute my-0 mx-[!important] top-[0px] left-[0px] w-[269px] h-10 z-[1]">
-                  <div className="absolute top-[0px] left-[0px] bg-royalblue w-[269px] h-10" />
-                </div>
-                <div className="my-0 mx-[!important] absolute top-[10px] left-[119px] flex flex-col items-start justify-start z-[2]">
-                  <div className="self-stretch relative leading-[20px] font-medium">
-                    65%
-                  </div>
-                  <div className="self-stretch overflow-hidden hidden flex-col items-start justify-start">
-                    <div className="self-stretch relative h-2 overflow-hidden shrink-0" />
-                  </div>
-                </div>
+                <EvaluationSection text="긍정 평가 비율" text1="61.2%" />
+                <HowBattery />
                 <Size56px
                   size56pxWidth="unset"
                   size56pxPosition="unset"

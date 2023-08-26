@@ -1,13 +1,22 @@
 import React, { useState, useEffect } from "react";
 import "./BatteryCharging.css"; // Import your CSS file
+import dummy from "../../data/dummy.json";
 
 function BatteryCharging() {
+  const val = dummy.age_ratio_vote[4];
+  const sum = Object.entries(dummy.age_ratio).map(([category, val]) => {
+    return val;
+  });
+  const allVote = sum.reduce((a, b) => a + b, 0);
+
+  const res = ((val[0] - val[1]) / allVote) * 100;
+  console.log(res);
   const [chargeLevel, setChargeLevel] = useState(0);
 
   useEffect(() => {
     // Simulate charging progress over time
     const interval = setInterval(() => {
-      if (chargeLevel < 88) {
+      if (chargeLevel < res) {
         setChargeLevel(chargeLevel + 1);
       }
     }, 10); // Adjust the interval as needed

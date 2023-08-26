@@ -8,9 +8,9 @@ function BatteryCharging() {
     // Simulate charging progress over time
     const interval = setInterval(() => {
       if (chargeLevel < 50) {
-        setChargeLevel(chargeLevel + 10);
+        setChargeLevel(chargeLevel + 1);
       }
-    }, 100); // Adjust the interval as needed
+    }, 10); // Adjust the interval as needed
 
     return () => {
       clearInterval(interval);
