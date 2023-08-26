@@ -1,10 +1,37 @@
 import ClassCell from "./ClassCell";
 import Size56px from "./Size56px";
 import ClassLabelSizeSmall from "./ClassLabelSizeSmall";
+import EvaluationSection from "./EvaluationSection";
 import ShapePillSizeMediumHiera from "./ShapePillSizeMediumHiera";
 import ShapePillSizeXSmallHiera from "./ShapePillSizeXSmallHiera";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 const ArtworkCard = () => {
+  const [data, setData] = useState(null); // Initialize data as null
+  const [advice, setAdvice] = useState(data?.ai_support?.advice);
+
+  useEffect(() => {
+    // Axios to fetch data
+    axios
+      .get("/da?format=json")
+      .then((response) => {
+        setData(response.data);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+  }, []);
+
+  useEffect(() => {
+    if (data) {
+      const advice = data.ai_support.advice
+        ? `${data.ai_support.advice} 작가님`
+        : "미래의 작가님";
+      setAdvice(advice);
+    }
+  }, [data]);
+
   return (
     <div className="self-stretch flex flex-col py-0 px-4 items-start justify-start text-center text-13xl text-black font-typography-heading-large">
       <div className="self-stretch flex flex-col items-start justify-start">
@@ -59,6 +86,7 @@ const ArtworkCard = () => {
             spacerBackgroundColor="unset"
             spacerHeight="24px"
           />
+          <EvaluationSection text3={advice} showWereTheLargest />
           <ClassLabelSizeSmall
             showWereTheLargest
             classLabelSizeSmallPosition="unset"
@@ -79,7 +107,7 @@ const ArtworkCard = () => {
             wereTheLargestAlignItems="flex-start"
             wereTheLargestJustifyContent="flex-start"
           />
-          <div className="self-stretch flex flex-col items-center justify-start">
+          {/* <div className="self-stretch flex flex-col items-center justify-start">
             <div className="self-stretch flex flex-col items-center justify-start">
               <div className="self-stretch flex flex-row flex-wrap items-start justify-center gap-[8px]">
                 <ShapePillSizeMediumHiera
@@ -210,7 +238,7 @@ const ArtworkCard = () => {
               spacerBackgroundColor="unset"
               spacerHeight="24px"
             />
-          </div>
+          </div> */}
         </div>
       </div>
 
