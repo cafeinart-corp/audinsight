@@ -162,37 +162,38 @@ const SectionCard2 = () => {
               text3="관람객 관심도는 다양한 요인으로 영향을 받을 수 있어요. 날씨, 사회 이슈, 카페 프로모션 등의 이유가 대표적이예요. 만약 특별한 이유가 없다면 요일에 따라 영향을 받을 수 있어요."
               showWereTheLargest
             />
-            <ClassLabelSizeSmall
-              showWereTheLargest
-              classLabelSizeSmallPosition="unset"
-              classLabelSizeSmallAlignSelf="stretch"
-              classLabelSizeSmallPadding="unset"
-              classLabelSizeSmallBoxSizing="unset"
-              classLabelSizeSmallAlignItems="flex-start"
-              textColor="#5e5e5e"
-              textTextAlign="center"
-              textFontSize="16px"
-              textLineHeight="24px"
-              textFontWeight="unset"
-              textFontFamily="Pretendard"
-              wereTheLargestMargin="unset"
-              wereTheLargestAlignSelf="stretch"
-              wereTheLargestOverflow="hidden"
-              wereTheLargestFlexDirection="column"
-              wereTheLargestAlignItems="flex-start"
-              wereTheLargestJustifyContent="flex-start"
-            />
           </div>
-          <SectionCard1
-            iconsChevronRight="/iconschevron-right.svg"
-            label="일요일은 내가 O파게티 요리사"
-            iconsChevronRight1="/iconschevron-right1.svg"
-            showWereTheLargest
-            iconLeading={false}
-            iconTrailing
-          />
         </div>
       </div>
+      <ClassLabelSizeSmall
+        wereTheLargestGalleryInTh="획득한 배지"
+        showWereTheLargest
+        classLabelSizeSmallPosition="unset"
+        classLabelSizeSmallAlignSelf="stretch"
+        classLabelSizeSmallPadding="unset"
+        classLabelSizeSmallBoxSizing="unset"
+        classLabelSizeSmallAlignItems="center"
+        textColor="#000"
+        textTextAlign="center"
+        textFontSize="20px"
+        textLineHeight="28px"
+        textFontWeight="bold"
+        textFontFamily="Nuance"
+        wereTheLargestMargin="unset"
+        wereTheLargestAlignSelf="stretch"
+        wereTheLargestOverflow="hidden"
+        wereTheLargestFlexDirection="column"
+        wereTheLargestAlignItems="flex-start"
+        wereTheLargestJustifyContent="flex-start"
+      />
+      <SectionCard1
+        iconsChevronRight="/iconschevron-right.svg"
+        label="일요일은 내가 O파게티 요리사"
+        iconsChevronRight1="/iconschevron-right1.svg"
+        showWereTheLargest
+        iconLeading={false}
+        iconTrailing
+      />
       <Size56px
         size56pxWidth="unset"
         size56pxPosition="unset"

@@ -162,6 +162,27 @@ function FormContainer1() {
           spacerBackgroundColor="unset"
           spacerHeight="32px"
         />
+        <ClassLabelSizeSmall
+          wereTheLargestGalleryInTh="획득한 배지"
+          showWereTheLargest
+          classLabelSizeSmallPosition="unset"
+          classLabelSizeSmallAlignSelf="stretch"
+          classLabelSizeSmallPadding="unset"
+          classLabelSizeSmallBoxSizing="unset"
+          classLabelSizeSmallAlignItems="center"
+          textColor="#000"
+          textTextAlign="center"
+          textFontSize="20px"
+          textLineHeight="28px"
+          textFontWeight="bold"
+          textFontFamily="Nuance"
+          wereTheLargestMargin="unset"
+          wereTheLargestAlignSelf="stretch"
+          wereTheLargestOverflow="hidden"
+          wereTheLargestFlexDirection="column"
+          wereTheLargestAlignItems="flex-start"
+          wereTheLargestJustifyContent="flex-start"
+        />
         <SectionCard1
           iconsChevronRight="/iconschevron-right.svg"
           label="상위 5%"

@@ -71,15 +71,36 @@ const EvaluationSection2 = () => {
             showWereTheLargest
           />
 
-          <SectionCard1
-            iconsChevronRight="/iconschevron-right.svg"
-            label="내가 제일 잘 나가"
-            iconsChevronRight1="/iconschevron-right1.svg"
+          <ClassLabelSizeSmall
+            wereTheLargestGalleryInTh="획득한 배지"
             showWereTheLargest
-            iconLeading={false}
-            iconTrailing
+            classLabelSizeSmallPosition="unset"
+            classLabelSizeSmallAlignSelf="stretch"
+            classLabelSizeSmallPadding="unset"
+            classLabelSizeSmallBoxSizing="unset"
+            classLabelSizeSmallAlignItems="center"
+            textColor="#000"
+            textTextAlign="center"
+            textFontSize="20px"
+            textLineHeight="28px"
+            textFontWeight="bold"
+            textFontFamily="Nuance"
+            wereTheLargestMargin="unset"
+            wereTheLargestAlignSelf="stretch"
+            wereTheLargestOverflow="hidden"
+            wereTheLargestFlexDirection="column"
+            wereTheLargestAlignItems="flex-start"
+            wereTheLargestJustifyContent="flex-start"
           />
         </div>
+        <SectionCard1
+          iconsChevronRight="/iconschevron-right.svg"
+          label="내가 제일 잘 나가"
+          iconsChevronRight1="/iconschevron-right1.svg"
+          showWereTheLargest
+          iconLeading={false}
+          iconTrailing
+        />
       </div>
       <Size56px
         size56pxWidth="unset"
