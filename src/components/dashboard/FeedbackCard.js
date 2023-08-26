@@ -384,6 +384,7 @@ const FeedbackCard = () => {
         </div>
         <div className="self-stretch flex flex-col items-center justify-start text-base">
           <ClassLabelSizeSmall
+            wereTheLargestGalleryInTh="획득한 배지"
             showWereTheLargest
             classLabelSizeSmallPosition="unset"
             classLabelSizeSmallAlignSelf="stretch"

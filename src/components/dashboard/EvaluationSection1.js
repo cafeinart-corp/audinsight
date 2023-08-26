@@ -69,6 +69,7 @@ const EvaluationSection1 = () => {
             prop="평가"
             prop1="  /  평가 하지 않음"
             text3="작품 평가 전환율 관람객이 작가님의 작품을 관람한 후, 실제 평가로 얼마나 이어지는지를 확인할 수 있어요. 만약 평가 전환 비율이 높다면, 그만큼 작가님의 그림에 이끌리는 사람이 많다는 뜻 일수도 있어요."
+            showWereTheLargest
           />
         </div>
         <div className="self-stretch flex flex-col items-center justify-start text-base text-dimgray-100">

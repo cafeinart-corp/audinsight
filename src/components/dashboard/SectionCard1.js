@@ -35,7 +35,7 @@ const SectionCard1 = ({
       <div className="flex flex-row items-start justify-center">
         <ShapePillSizeMediumHiera
           iconsFavorite="/iconschevron-right.svg"
-          label="상위 5%"
+          label={label}
           iconsFavorite1="/iconschevron-right1.svg"
           iconLeading={false}
           iconTrailing

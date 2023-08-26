@@ -24,7 +24,7 @@ const EvaluationSection2 = () => {
         />
         <div className="self-stretch flex flex-col items-center justify-start">
           <ClassLabelSizeSmall
-            showWereTheLargest
+            showWereTheLargest={false}
             classLabelSizeSmallPosition="unset"
             classLabelSizeSmallAlignSelf="stretch"
             classLabelSizeSmallPadding="unset"
@@ -52,9 +52,6 @@ const EvaluationSection2 = () => {
               </p>
               <p className="m-0 text-royalblue">마음에 들어했어요</p>
             </b>
-            <div className="self-stretch overflow-hidden hidden flex-col items-start justify-start">
-              <div className="self-stretch relative h-5 overflow-hidden shrink-0" />
-            </div>
           </div>
           <Size56px
             size56pxWidth="unset"
@@ -73,6 +70,7 @@ const EvaluationSection2 = () => {
             text3="작품 호감도는 관람객이 느끼는 가장 직접정인 감정을 나타내요. 일반적으로 70% 정도 마음에 들어해요. 이보다 높으면 작가님의 작품이 관람객들에게 긍정적인 경험을 이끌어내는 어떤 요소가 있다는 것을 의미합니다."
             showWereTheLargest
           />
+
           <SectionCard1
             iconsChevronRight="/iconschevron-right.svg"
             label="내가 제일 잘 나가"

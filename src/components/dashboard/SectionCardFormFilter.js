@@ -103,6 +103,7 @@ const SectionCardFormFilter = () => {
             />
             <ClassLabelSizeSmall
               showWereTheLargest
+              prop1="작가님의 작품 창파는 20세 ~ 24세 나이대에서 가장 많은 반응이 있었어요. 특히, 남성분들께 65%가 넘는 비율로 호응을 받았습니다."
               classLabelSizeSmallPosition="unset"
               classLabelSizeSmallAlignSelf="stretch"
               classLabelSizeSmallPadding="unset"
@@ -124,6 +125,7 @@ const SectionCardFormFilter = () => {
           </div>
           <div className="self-stretch flex flex-col items-center justify-start text-base text-dimgray-100">
             <ClassLabelSizeSmall
+              wereTheLargestGalleryInTh="획득한 배지"
               showWereTheLargest
               classLabelSizeSmallPosition="unset"
               classLabelSizeSmallAlignSelf="stretch"

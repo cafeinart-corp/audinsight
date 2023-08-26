@@ -190,6 +190,7 @@ const SectionCard4 = () => {
           </div>
           <div className="self-stretch flex flex-col items-center justify-start">
             <ClassLabelSizeSmall
+              wereTheLargestGalleryInTh="획득한 배지"
               showWereTheLargest
               classLabelSizeSmallPosition="unset"
               classLabelSizeSmallAlignSelf="stretch"

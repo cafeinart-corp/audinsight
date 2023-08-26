@@ -213,6 +213,7 @@ const ArtworkCard = () => {
           </div>
         </div>
       </div>
+
       <Size56px
         size56pxWidth="unset"
         size56pxPosition="unset"

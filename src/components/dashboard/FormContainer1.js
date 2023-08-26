@@ -17,7 +17,7 @@ function FormContainer1() {
       <div className="self-stretch flex flex-col items-center justify-start">
         <div className="self-stretch flex flex-col py-0 px-5 items-start justify-start">
           <ClassLabelSizeSmall
-            prop="도달 예측"
+            prop1="도달 예측"
             classLabelSizeSmallPosition="unset"
             classLabelSizeSmallAlignSelf="stretch"
             classLabelSizeSmallPadding="unset"

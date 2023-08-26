@@ -224,8 +224,17 @@ const SectionCard = () => {
               spacerHeight="24px"
             />
           </div>
+          <Size56px
+            size56pxWidth="unset"
+            size56pxPosition="unset"
+            size56pxAlignSelf="stretch"
+            size56pxZIndex="unset"
+            spacerBackgroundColor="unset"
+            spacerHeight="24px"
+          />
           <div className="self-stretch flex flex-col items-center justify-start text-base">
             <ClassLabelSizeSmall
+              wereTheLargestGalleryInTh="획득한 배지"
               showWereTheLargest
               classLabelSizeSmallPosition="unset"
               classLabelSizeSmallAlignSelf="stretch"

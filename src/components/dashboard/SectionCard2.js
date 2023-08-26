@@ -2,6 +2,7 @@ import ClassCell from "./ClassCell";
 import Size56px from "./Size56px";
 import ClassLabelSizeSmall from "./ClassLabelSizeSmall";
 import SectionCard1 from "./SectionCard1";
+import EvaluationSection from "./EvaluationSection";
 
 const SectionCard2 = () => {
   return (
@@ -157,13 +158,9 @@ const SectionCard2 = () => {
                 spacerHeight="24px"
               />
             </div>
-            <Size56px
-              size56pxWidth="unset"
-              size56pxPosition="unset"
-              size56pxAlignSelf="stretch"
-              size56pxZIndex="unset"
-              spacerBackgroundColor="unset"
-              spacerHeight="24px"
+            <EvaluationSection
+              text3="관람객 관심도는 다양한 요인으로 영향을 받을 수 있어요. 날씨, 사회 이슈, 카페 프로모션 등의 이유가 대표적이예요. 만약 특별한 이유가 없다면 요일에 따라 영향을 받을 수 있어요."
+              showWereTheLargest
             />
             <ClassLabelSizeSmall
               showWereTheLargest
