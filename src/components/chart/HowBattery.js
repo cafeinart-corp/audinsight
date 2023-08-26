@@ -10,7 +10,6 @@ function BatteryCharging() {
   const allVote = sum.reduce((a, b) => a + b, 0);
 
   const res = ((val[0] - val[1]) / allVote) * 100;
-  console.log(res);
   const [chargeLevel, setChargeLevel] = useState(0);
 
   useEffect(() => {
