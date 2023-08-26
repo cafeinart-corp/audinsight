@@ -3,6 +3,7 @@ import Size56px from "./Size56px";
 import ClassLabelSizeSmall from "./ClassLabelSizeSmall";
 import EvaluationSection from "./EvaluationSection";
 import SectionCard1 from "./SectionCard1";
+import FavorBattery from "../chart/FavorBattery";
 
 const EvaluationSection2 = () => {
   return (
@@ -62,17 +63,14 @@ const EvaluationSection2 = () => {
             size56pxZIndex="unset"
             spacerBackgroundColor="unset"
             spacerHeight="32px"
+            showWereTheLargest
           />
+          <EvaluationSection text="호감도" text1="88%" />
+          <FavorBattery />
           <EvaluationSection
-            text="호감도"
-            text1="88%"
-            text2="88%"
             prop="마음에 들어요"
             prop1="  /  평범해요"
             text3="작품 호감도는 관람객이 느끼는 가장 직접정인 감정을 나타내요. 일반적으로 70% 정도 마음에 들어해요. 이보다 높으면 작가님의 작품이 관람객들에게 긍정적인 경험을 이끌어내는 어떤 요소가 있다는 것을 의미합니다."
-            propWidth="336px"
-            propWidth1="336px"
-            propLeft="153px"
             showWereTheLargest
           />
           <SectionCard1

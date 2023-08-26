@@ -17,20 +17,6 @@ function LineMarkChart() {
     updateChartData();
   }, []);
 
-  useEffect(
-    () => {
-      // Check if any relevant props have changed
-      // Replace 'someProp' with the actual prop you want to compare
-      // For example, if you have a prop 'someProp', you can replace it like this:
-      // if (prevProps.someProp !== this.props.someProp) {
-      //   updateChartData();
-      // }
-    },
-    [
-      /* Add the relevant props here */
-    ]
-  );
-
   const updateChartData = () => {
     const dailyViewer = data.daily_viewer;
     const dataForChart = [];
@@ -46,7 +32,12 @@ function LineMarkChart() {
 
   return (
     <div className="self-stretch flex flex-col items-center justify-start">
-      <XYPlot xType="ordinal" width={500} height={400}>
+      <XYPlot
+        xType="ordinal"
+        width={500}
+        height={(400 * 2) / 3}
+        margin={{ left: 50, bottom: 50 }}
+      >
         <GradientDefs>
           <linearGradient id="area-fill" x1="0" x2="0" y1="0" y2="1">
             <stop offset="0%" stopColor="#266EF1" stopOpacity={0.7} />

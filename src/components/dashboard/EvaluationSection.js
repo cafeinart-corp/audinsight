@@ -58,7 +58,7 @@ const EvaluationSection = ({
         />
       </div>
       <div className="self-stretch flex flex-col items-center justify-start relative text-white">
-        <div className="self-stretch relative bg-whitesmoke h-10 z-[0]" />
+        {/* <div className="self-stretch relative bg-whitesmoke h-10 z-[0]" />
         <div
           className="absolute my-0 mx-[!important] top-[0px] left-[0px] w-[201px] h-10 z-[1]"
           style={groupDivStyle}
@@ -67,7 +67,7 @@ const EvaluationSection = ({
             className="absolute top-[0px] left-[0px] bg-royalblue w-[201px] h-10"
             style={rectangleDivStyle}
           />
-        </div>
+        </div> */}
         <div
           className="my-0 mx-[!important] absolute top-[10px] left-[85px] flex flex-col items-start justify-start z-[2]"
           style={typographyStyle}
@@ -75,6 +75,7 @@ const EvaluationSection = ({
           <div className="self-stretch relative leading-[20px] font-medium">
             {text2}
           </div>
+
           <div className="self-stretch overflow-hidden hidden flex-col items-start justify-start">
             <div className="self-stretch relative h-2 overflow-hidden shrink-0" />
           </div>
